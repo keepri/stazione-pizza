@@ -1,0 +1,22 @@
+{
+    "name": "stazione",
+    "version": "0.1.0",
+    "scripts": {
+        "start": "vite",
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "vite preview",
+        "format": "prettier --write ."
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+        "prettier": "^3.3.2",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.11",
+        "vite-plugin-solid": "^2.8.2"
+    },
+    "dependencies": {
+        "@solidjs/router": "^0.13.6",
+        "solid-js": "^1.8.11"
+    }
+}
