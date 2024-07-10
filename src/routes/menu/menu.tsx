@@ -1,3 +1,9 @@
 export function Menu() {
-    return <h1>Menu</h1>;
+    return (
+        <>
+            <section class="container">
+                <h1>Menu</h1>
+            </section>
+        </>
+    );
 }

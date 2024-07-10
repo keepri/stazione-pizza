@@ -1,3 +1,9 @@
 export function Home() {
-    return <h1>Home</h1>;
+    return (
+        <>
+            <section class="container">
+                <h1>Home</h1>
+            </section>
+        </>
+    );
 }

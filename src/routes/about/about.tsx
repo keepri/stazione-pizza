@@ -1,3 +1,9 @@
 export function About() {
-    return <h1>About</h1>;
+    return (
+        <>
+            <section class="container">
+                <h1>About</h1>
+            </section>
+        </>
+    );
 }
