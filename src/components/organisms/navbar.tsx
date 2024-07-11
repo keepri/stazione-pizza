@@ -15,7 +15,9 @@ export function Navbar() {
     return (
         <nav class="container sticky top-0 flex justify-between items-center pt-11">
             <Logo href={Path.Home}>
-                <h1 class="text-lg text-stz-dark font-bold">Stazione Pizza</h1>
+                <h1 class="text-lg text-stz-dark font-bold font-poppins">
+                    Stazione Pizza
+                </h1>
             </Logo>
             <NavLinkGroup links={links} />
         </nav>

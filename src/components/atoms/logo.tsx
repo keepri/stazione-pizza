@@ -3,7 +3,7 @@ import { ParentProps, children } from "solid-js";
 
 import { Path } from "../../routes/utils";
 
-type Size = "lg";
+type Size = "lg" | "xl";
 
 type Props = ParentProps & {
     size?: Size;
@@ -12,23 +12,22 @@ type Props = ParentProps & {
 
 const sizes: Record<Size, string> = {
     lg: "w-28 h-28",
+    xl: "w-40 h-40",
 } as const;
 
 export function Logo(props: Props) {
     props.size ??= "lg";
 
     const size = sizes[props.size];
-    const containerStyles = "flex gap-7 justify-between items-center flex-wrap";
+    const containerStyles = "flex gap-5 justify-between items-center flex-wrap";
 
-    {
-        // TODO
-        // <img
-        //     class={`${size} rounded-full`}
-        //     src={undefined}
-        //     alt="Stazione logo"
-        // />
-    }
-    const logo = <div class={`${size} rounded-full bg-red-300`} />;
+    const logo = (
+        <img
+            class={`${size} rounded-full`}
+            src="/src/assets/logo.svg"
+            alt="Stazione logo"
+        />
+    );
     const resolved = children(() => props.children);
 
     if (props.href) {

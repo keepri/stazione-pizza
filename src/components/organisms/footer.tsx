@@ -34,7 +34,7 @@ export function Footer() {
                         links={legalLinks}
                     />
                 </section>
-                <Logo href={Path.Home} />
+                <Logo href={Path.Home} size="xl" />
             </main>
         </footer>
     );

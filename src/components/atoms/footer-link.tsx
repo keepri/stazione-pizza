@@ -9,8 +9,8 @@ export function FooterLink(props: Props) {
     const resolved = children(() => props.children);
 
     return (
-        <li class="mb-1">
-            <A href={props.href} class="hover:underline">
+        <li>
+            <A href={props.href} class="font-dm-sans hover:underline">
                 {resolved()}
             </A>
         </li>
