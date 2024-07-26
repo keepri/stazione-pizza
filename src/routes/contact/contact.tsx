@@ -1,9 +1,11 @@
+import { Section } from "../../components/atoms/section";
+
 export function Contact() {
     return (
         <>
-            <section class="container">
+            <Section class="container">
                 <h1>Contact</h1>
-            </section>
+            </Section>
         </>
     );
 }

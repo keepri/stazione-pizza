@@ -13,7 +13,7 @@ const links: NavLinkGroupProps["links"] = [
 
 export function Navbar() {
     return (
-        <nav class="container sticky top-0 flex justify-between items-center pt-11">
+        <nav class="container sticky top-0 flex justify-between items-center pt-12 pb-2 z-50 bg-stz-background">
             <Logo href={Path.Home}>
                 <h1 class="text-lg text-stz-dark font-bold font-poppins">
                     Stazione Pizza

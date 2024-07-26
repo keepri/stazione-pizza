@@ -22,8 +22,8 @@ const legalLinks: FooterLinkGroupProps["links"] = [
 
 export function Footer() {
     return (
-        <footer class="bg-stz-primary py-7 mt-auto">
-            <main class="container flex flex-wrap gap-24 justify-between items-center">
+        <footer class="bg-stz-primary py-12 mt-auto">
+            <main class="container flex flex-wrap gap-24 justify-between">
                 <section class="flex flex-wrap gap-24">
                     <FooterLinkGroup
                         title={LINK_GROUP_TITLE_ONE}

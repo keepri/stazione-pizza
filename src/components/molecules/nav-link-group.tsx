@@ -1,4 +1,5 @@
-import { Index } from "solid-js";
+import clsx from "clsx";
+import { Index, JSX } from "solid-js";
 
 import { Path } from "../../routes/utils";
 import { NavLink } from "../atoms/nav-link";
@@ -8,13 +9,13 @@ type NavLink = {
     href: Path;
 };
 
-export type Props = {
+export type Props = JSX.HTMLAttributes<HTMLUListElement> & {
     links: ReadonlyArray<NavLink>;
 };
 
 export function NavLinkGroup(props: Props) {
     return (
-        <ul class="flex gap-2 flex-wrap">
+        <ul class={clsx("flex gap-2 flex-wrap", props.class)}>
             <Index each={props.links}>
                 {function renderLinkList(link) {
                     const { text, href } = link();
