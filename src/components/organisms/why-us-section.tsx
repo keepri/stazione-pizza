@@ -10,10 +10,10 @@ type Props = {
 export function WhyUsSection(props: Props) {
     return (
         <Section>
-            <h1 class="text-7xl font-extrabold text-stz-dark mb-16">
+            <h2 class="text-7xl font-extrabold text-stz-dark mb-16">
                 De ce să ne alegi?
-            </h1>
-            <ul class="flex flex-col gap-5">
+            </h2>
+            <ul class="flex flex-col gap-7">
                 <Index each={props.motives}>
                     {function renderMotive(motive) {
                         const { title, description } = motive();

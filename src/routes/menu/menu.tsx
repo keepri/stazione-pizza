@@ -1,11 +1,24 @@
+import { Index } from "solid-js";
+
+import { PageTitle } from "../../components/atoms/page-title";
 import { Section } from "../../components/atoms/section";
+import { MenuCategory } from "../../components/molecules/menu-category";
+import { CATEGORIES } from "../../data/categories";
 
 export function Menu() {
     return (
         <>
-            <Section class="container">
-                <h1>Menu</h1>
-            </Section>
+            <PageTitle side="right">Menu</PageTitle>
+            <Index each={CATEGORIES}>
+                {function renderCategories(category) {
+                    const { title, products } = category();
+                    return (
+                        <Section class="container">
+                            <MenuCategory title={title} products={products} />
+                        </Section>
+                    );
+                }}
+            </Index>
         </>
     );
 }
