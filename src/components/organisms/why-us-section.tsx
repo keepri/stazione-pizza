@@ -1,10 +1,10 @@
 import { Index } from "solid-js";
 
-import { Motive } from "../atoms/motive";
+import { Motive, Props as MotiveProps } from "../atoms/motive";
 import { Section } from "../atoms/section";
 
 type Props = {
-    motives: ReadonlyArray<Motive>;
+    motives: ReadonlyArray<MotiveProps>;
 };
 
 export function WhyUsSection(props: Props) {

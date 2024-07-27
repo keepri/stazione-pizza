@@ -1,15 +1,7 @@
+import { LINKS } from "../../data/navbar";
 import { Path } from "../../routes/utils";
 import { Logo } from "../atoms/logo";
-import {
-    NavLinkGroup,
-    Props as NavLinkGroupProps,
-} from "../molecules/nav-link-group";
-
-const links: NavLinkGroupProps["links"] = [
-    { text: "Menu", href: Path.Menu },
-    { text: "About", href: Path.About },
-    { text: "Contact", href: Path.Contact },
-] as const;
+import { NavLinkGroup } from "../molecules/nav-link-group";
 
 export function Navbar() {
     return (
@@ -20,7 +12,7 @@ export function Navbar() {
                         Stazione Pizza
                     </h1>
                 </Logo>
-                <NavLinkGroup links={links} />
+                <NavLinkGroup links={LINKS} />
             </main>
         </nav>
     );

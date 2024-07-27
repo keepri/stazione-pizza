@@ -1,6 +1,6 @@
-import { MenuCategory } from "../../components/molecules/menu-category";
+import { Props as MenuCategoryProps } from "../../components/molecules/menu-category";
 
-type MenuCategoryProducts = Readonly<MenuCategory["products"]>;
+type MenuCategoryProducts = Readonly<MenuCategoryProps["products"]>;
 type MenuCategoryProduct = MenuCategoryProducts[number];
 
 export const MARGARITA: MenuCategoryProduct = {

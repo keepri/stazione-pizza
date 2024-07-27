@@ -1,11 +1,9 @@
-export type Motive = {
+export type Props = {
     title: string;
     description: string;
 };
 
-type MotiveProps = Motive;
-
-export function Motive(props: MotiveProps) {
+export function Motive(props: Props) {
     return (
         <li>
             <h4 class="font-extrabold text-xl text-stz-primary mb-2">
