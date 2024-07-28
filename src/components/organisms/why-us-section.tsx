@@ -1,8 +1,8 @@
-import { Index } from "solid-js";
+import { Accessor, Index } from "solid-js";
 
 import { MOTIVES } from "../../data/motives";
-import { Motive } from "../atoms/motive";
 import { Section } from "../atoms/section";
+import { Motive, TMotive } from "../molecules/motive";
 
 export function WhyUsSection() {
     return (
@@ -11,16 +11,14 @@ export function WhyUsSection() {
                 De ce să ne alegi?
             </h2>
             <ul class="flex flex-col gap-7">
-                <Index each={MOTIVES}>
-                    {function renderMotive(motive) {
-                        const { title, description } = motive();
-
-                        return (
-                            <Motive title={title} description={description} />
-                        );
-                    }}
-                </Index>
+                <Index each={MOTIVES} children={renderMotive} />
             </ul>
         </Section>
     );
+}
+
+function renderMotive(motive: Accessor<TMotive>) {
+    const { title, description } = motive();
+
+    return <Motive title={title} description={description} />;
 }

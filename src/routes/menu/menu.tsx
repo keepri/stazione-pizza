@@ -18,7 +18,7 @@ function renderCategories(category: Accessor<TMenu["categories"][number]>) {
     const { title, products, icons } = category();
 
     return (
-        <Section class="container">
+        <Section>
             <MenuCategory title={title} products={products} icons={icons} />
         </Section>
     );

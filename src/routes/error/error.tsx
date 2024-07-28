@@ -5,7 +5,7 @@ export function Error(error: any, _reset: () => void) {
 
     return (
         <>
-            <Section class="container">
+            <Section>
                 <h1>Error {error.message}</h1>;
             </Section>
         </>
