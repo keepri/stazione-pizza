@@ -1,11 +1,11 @@
 import { A } from "@solidjs/router";
 import { ParentProps, children } from "solid-js";
 
-type Props = ParentProps & {
+export type TProps = ParentProps & {
     href: string;
 };
 
-export function FooterLink(props: Props) {
+export function FooterLink(props: TProps) {
     const resolved = children(() => props.children);
 
     return (

@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { JSX, ParentProps, children, splitProps } from "solid-js";
 
-type Props = ParentProps & JSX.HTMLAttributes<HTMLElement>;
+type TProps = ParentProps & JSX.HTMLAttributes<HTMLElement>;
 
-export function Section(props: Props) {
+export function Section(props: TProps) {
     const [local, others] = splitProps(props, ["children", "class"]);
     const resolved = children(() => local.children);
 

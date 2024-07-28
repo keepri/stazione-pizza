@@ -4,9 +4,9 @@ import { ParentProps, children, splitProps } from "solid-js";
 
 import { BUTTON_STYLES } from "./button";
 
-type Props = ParentProps & AnchorProps;
+type TProps = ParentProps & AnchorProps;
 
-export function ButtonLink(props: Props) {
+export function ButtonLink(props: TProps) {
     const [local, others] = splitProps(props, ["href", "children", "class"]);
     const resolved = children(() => local.children);
 

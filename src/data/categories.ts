@@ -1,19 +1,31 @@
-import { Props as MenuCategoryProps } from "../components/molecules/menu-category";
+import { TMenu, TMenuCategory } from "../routes/menu/menu";
 import { DIVERSE } from "./products/diverse";
 import { PIZZAS } from "./products/pizzas";
 import { SANDWICHES } from "./products/sandwiches";
 
-export const CATEGORIES: ReadonlyArray<MenuCategoryProps> = [
-    {
-        title: "PIZZA",
-        products: PIZZAS,
-    },
-    {
-        title: "SANDWICH NAPOLITAN PANUOZZO",
-        products: SANDWICHES,
-    },
-    {
-        title: "DIVERSE",
-        products: DIVERSE,
-    },
+const PIZZA_CATEGORY: TMenuCategory = {
+    title: "PIZZA",
+    icons: [
+        "src/assets/icons/pizza-slice.svg",
+        "src/assets/icons/pizza-whole.svg",
+    ] as const,
+    products: PIZZAS,
+};
+
+const SANDWICH_CATEGORY: TMenuCategory = {
+    title: "SANDWICH NAPOLITAN PANUOZZO",
+    icons: ["src/assets/icons/panini.svg"] as const,
+    products: SANDWICHES,
+};
+
+const DIVERSE_CATEGORY: TMenuCategory = {
+    title: "DIVERSE",
+    icons: [] as const,
+    products: DIVERSE,
+};
+
+export const CATEGORIES: TMenu["categories"] = [
+    PIZZA_CATEGORY,
+    SANDWICH_CATEGORY,
+    DIVERSE_CATEGORY,
 ] as const;

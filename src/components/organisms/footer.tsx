@@ -1,10 +1,13 @@
 import { LEGAL_LINKS, NAV_LINKS } from "../../data/footer";
 import { Path } from "../../routes/utils";
 import { Logo } from "../atoms/logo";
-import { FooterLinkGroup } from "../molecules/footer-link-group";
+import {
+    FooterLinkGroup,
+    TProps as TFooterLinkGroupProps,
+} from "../molecules/footer-link-group";
 
-const LINK_GROUP_TITLE_ONE = "Stazione Pizza";
-const LINK_GROUP_TITLE_TWO = "Legal stuff";
+const LINK_GROUP_TITLE_ONE: TFooterLinkGroupProps["title"] = "Stazione Pizza";
+const LINK_GROUP_TITLE_TWO: TFooterLinkGroupProps["title"] = "Legal stuff";
 
 export function Footer() {
     return (

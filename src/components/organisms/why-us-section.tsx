@@ -1,20 +1,17 @@
 import { Index } from "solid-js";
 
-import { Motive, Props as MotiveProps } from "../atoms/motive";
+import { MOTIVES } from "../../data/motives";
+import { Motive } from "../atoms/motive";
 import { Section } from "../atoms/section";
 
-type Props = {
-    motives: ReadonlyArray<MotiveProps>;
-};
-
-export function WhyUsSection(props: Props) {
+export function WhyUsSection() {
     return (
         <Section>
             <h2 class="text-7xl font-extrabold text-stz-dark mb-16">
                 De ce să ne alegi?
             </h2>
             <ul class="flex flex-col gap-7">
-                <Index each={props.motives}>
+                <Index each={MOTIVES}>
                     {function renderMotive(motive) {
                         const { title, description } = motive();
 

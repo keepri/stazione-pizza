@@ -1,27 +1,22 @@
 import clsx from "clsx";
-import { Index, JSX } from "solid-js";
+import { Accessor, Index, JSX } from "solid-js";
 
-import { Path } from "../../routes/utils";
-import { NavLink } from "../atoms/nav-link";
+import { NavLink, TProps as TNavLinkProps } from "../atoms/nav-link";
 
-type NavLink = {
-    text: string;
-    href: Path;
+export type TProps = JSX.HTMLAttributes<HTMLUListElement> & {
+    links: ReadonlyArray<TNavLinkProps>;
 };
 
-export type Props = JSX.HTMLAttributes<HTMLUListElement> & {
-    links: ReadonlyArray<NavLink>;
-};
-
-export function NavLinkGroup(props: Props) {
+export function NavLinkGroup(props: TProps) {
     return (
         <ul class={clsx("flex gap-2 flex-wrap", props.class)}>
-            <Index each={props.links}>
-                {function renderLinkList(link) {
-                    const { text, href } = link();
-                    return <NavLink href={href}>{text}</NavLink>;
-                }}
-            </Index>
+            <Index each={props.links} children={renderLinkList} />
         </ul>
     );
+}
+
+function renderLinkList(link: Accessor<TProps["links"][number]>) {
+    const { children, href } = link();
+
+    return <NavLink href={href}>{children}</NavLink>;
 }

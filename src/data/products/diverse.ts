@@ -1,9 +1,6 @@
-import { Props as MenuCategoryProps } from "../../components/molecules/menu-category";
+import { TMenuCategory, TMenuProduct } from "../../routes/menu/menu";
 
-type MenuCategoryProducts = Readonly<MenuCategoryProps["products"]>;
-type MenuCategoryProduct = MenuCategoryProducts[number];
-
-export const SOS_ROSII: MenuCategoryProduct = {
+export const SOS_ROSII: TMenuProduct = {
     name: "Sos roșii",
     description: "dulce / picant",
     prices: [
@@ -18,7 +15,7 @@ export const SOS_ROSII: MenuCategoryProduct = {
     ],
 } as const;
 
-export const SOS_ALB: MenuCategoryProduct = {
+export const SOS_ALB: TMenuProduct = {
     name: "Sos alb",
     description: "iaurt, maoineză, usturoi",
     prices: [
@@ -33,7 +30,7 @@ export const SOS_ALB: MenuCategoryProduct = {
     ],
 } as const;
 
-export const ULEI_AROMATIZAT: MenuCategoryProduct = {
+export const ULEI_AROMATIZAT: TMenuProduct = {
     name: "Ulei aromatizat",
     description: "picant / usturoi",
     prices: [
@@ -48,7 +45,7 @@ export const ULEI_AROMATIZAT: MenuCategoryProduct = {
     ],
 } as const;
 
-export const AMBALAJ_PIZZA: MenuCategoryProduct = {
+export const AMBALAJ_PIZZA: TMenuProduct = {
     name: "Ambalaj pizza",
     prices: [
         {
@@ -58,7 +55,7 @@ export const AMBALAJ_PIZZA: MenuCategoryProduct = {
     ],
 } as const;
 
-export const DIVERSE: MenuCategoryProducts = [
+export const DIVERSE: TMenuCategory["products"] = [
     SOS_ROSII,
     SOS_ALB,
     ULEI_AROMATIZAT,

@@ -1,11 +1,13 @@
 import { A } from "@solidjs/router";
 import { ParentProps, children } from "solid-js";
 
-type NavLinkProps = ParentProps & {
-    href: string;
+import { Path } from "../../routes/utils";
+
+export type TProps = ParentProps & {
+    href: Path;
 };
 
-export function NavLink(props: NavLinkProps) {
+export function NavLink(props: TProps) {
     const resolved = children(() => props.children);
 
     return (

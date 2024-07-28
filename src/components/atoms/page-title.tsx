@@ -1,11 +1,11 @@
 import { clsx } from "clsx";
 import { ParentProps, children } from "solid-js";
 
-type Props = ParentProps & {
+type TProps = ParentProps & {
     side?: "left" | "right";
 };
 
-export function PageTitle(props: Props) {
+export function PageTitle(props: TProps) {
     props.side ??= "left";
 
     const resolved = children(() => props.children);

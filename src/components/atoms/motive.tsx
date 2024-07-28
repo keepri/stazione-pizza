@@ -1,9 +1,6 @@
-export type Props = {
-    title: string;
-    description: string;
-};
+type TProps = TMotive;
 
-export function Motive(props: Props) {
+export function Motive(props: TProps) {
     return (
         <li>
             <h4 class="font-extrabold text-xl text-stz-primary mb-2">
@@ -13,3 +10,8 @@ export function Motive(props: Props) {
         </li>
     );
 }
+
+export type TMotive = {
+    title: string;
+    description: string;
+};

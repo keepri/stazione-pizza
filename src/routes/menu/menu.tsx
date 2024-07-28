@@ -2,10 +2,7 @@ import { Accessor, Index } from "solid-js";
 
 import { PageTitle } from "../../components/atoms/page-title";
 import { Section } from "../../components/atoms/section";
-import {
-    MenuCategory,
-    Props as MenuCategoryProps,
-} from "../../components/molecules/menu-category";
+import { MenuCategory } from "../../components/molecules/menu-category";
 import { CATEGORIES } from "../../data/categories";
 
 export function Menu() {
@@ -17,12 +14,35 @@ export function Menu() {
     );
 }
 
-function renderCategories(category: Accessor<MenuCategoryProps>) {
-    const { title, products } = category();
+function renderCategories(category: Accessor<TMenu["categories"][number]>) {
+    const { title, products, icons } = category();
 
     return (
         <Section class="container">
-            <MenuCategory title={title} products={products} />
+            <MenuCategory title={title} products={products} icons={icons} />
         </Section>
     );
 }
+
+export type TMenu = {
+    categories: ReadonlyArray<{
+        title: string;
+        products: ReadonlyArray<{
+            name: string;
+            description?: string;
+            prices: ReadonlyArray<{
+                value: number;
+                currency: "ron";
+                weight?: {
+                    value: number;
+                    unit: TMenuProductPriceWeightUnit;
+                };
+            }>;
+        }>;
+        icons: ReadonlyArray<string>;
+    }>;
+};
+
+export type TMenuCategory = Pick<TMenu, "categories">["categories"][number];
+export type TMenuProduct = Pick<TMenuCategory, "products">["products"][number];
+export type TMenuProductPriceWeightUnit = "milliliter" | "gram";

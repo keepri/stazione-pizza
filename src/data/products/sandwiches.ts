@@ -1,9 +1,6 @@
-import { Props as MenuCategoryProps } from "../../components/molecules/menu-category";
+import { TMenuCategory, TMenuProduct } from "../../routes/menu/menu";
 
-type MenuCategoryProducts = Readonly<MenuCategoryProps["products"]>;
-type MenuCategoryProduct = MenuCategoryProducts[number];
-
-export const PROSCIUTTO_PANUOZZO: MenuCategoryProduct = {
+export const PROSCIUTTO_PANUOZZO: TMenuProduct = {
     name: "Prosciutto Panuozzo",
     description:
         "mozzarella fior di latte, roșii, rucola, prosciutto cotto, ulei masline",
@@ -19,7 +16,7 @@ export const PROSCIUTTO_PANUOZZO: MenuCategoryProduct = {
     ],
 } as const;
 
-export const CAPRESE_PANUOZZO: MenuCategoryProduct = {
+export const CAPRESE_PANUOZZO: TMenuProduct = {
     name: "Caprese Panuozzo (vegetarian)",
     description: "mozzarella fior di latte, roșii, ulei măsline, busuioc",
     prices: [
@@ -34,7 +31,7 @@ export const CAPRESE_PANUOZZO: MenuCategoryProduct = {
     ],
 } as const;
 
-export const SANDWICHES: MenuCategoryProducts = [
+export const SANDWICHES: TMenuCategory["products"] = [
     PROSCIUTTO_PANUOZZO,
     CAPRESE_PANUOZZO,
 ];

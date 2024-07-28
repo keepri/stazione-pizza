@@ -1,30 +1,25 @@
-import { Index } from "solid-js";
+import { Accessor, Index } from "solid-js";
 
-import { Path } from "../../routes/utils";
-import { FooterLink } from "../atoms/footer-link";
+import { FooterLink, TProps as TFooterLinkProps } from "../atoms/footer-link";
 
-type FooterLink = {
-    href: Path;
-    text: string;
-};
-
-export type Props = {
+export type TProps = {
     title: string;
-    links: ReadonlyArray<FooterLink>;
+    links: ReadonlyArray<TFooterLinkProps>;
 };
 
-export function FooterLinkGroup(props: Props) {
+export function FooterLinkGroup(props: TProps) {
     return (
         <section class="text-stz-light">
             <h4 class="text-lg mb-3 font-bold">{props.title}</h4>
             <ul>
-                <Index each={props.links}>
-                    {function renderLink(item) {
-                        const { text, href } = item();
-                        return <FooterLink href={href}>{text}</FooterLink>;
-                    }}
-                </Index>
+                <Index each={props.links} children={renderLink} />
             </ul>
         </section>
     );
+}
+
+function renderLink(item: Accessor<TProps["links"][number]>) {
+    const { children, href } = item();
+
+    return <FooterLink href={href}>{children}</FooterLink>;
 }

@@ -1,9 +1,6 @@
-import { Props as MenuCategoryProps } from "../../components/molecules/menu-category";
+import { TMenuCategory, TMenuProduct } from "../../routes/menu/menu";
 
-type MenuCategoryProducts = Readonly<MenuCategoryProps["products"]>;
-type MenuCategoryProduct = MenuCategoryProducts[number];
-
-export const MARGARITA: MenuCategoryProduct = {
+export const MARGARITA: TMenuProduct = {
     name: "Margherita",
     description: "sos de roșii, mozzarella fior di latte, parmesan, busuioc",
     prices: [
@@ -26,7 +23,7 @@ export const MARGARITA: MenuCategoryProduct = {
     ],
 } as const;
 
-export const PROSCIUTTO_E_FUNGHI: MenuCategoryProduct = {
+export const PROSCIUTTO_E_FUNGHI: TMenuProduct = {
     name: "Prosciutto e Funghi",
     description:
         "sos de roșii, mozzarella fior di latte, ciuperci brune, prosciutto cotto, busuioc",
@@ -50,7 +47,7 @@ export const PROSCIUTTO_E_FUNGHI: MenuCategoryProduct = {
     ],
 } as const;
 
-export const DIAVOLA: MenuCategoryProduct = {
+export const DIAVOLA: TMenuProduct = {
     name: "Diavola",
     description:
         "sos de roșii, mozzarella fior di latte, salam picant napoli, ardei iute, busuioc",
@@ -74,7 +71,7 @@ export const DIAVOLA: MenuCategoryProduct = {
     ],
 } as const;
 
-export const CARNIVORA: MenuCategoryProduct = {
+export const CARNIVORA: TMenuProduct = {
     name: "Carnivora",
     description:
         "sos de roșii, mozzarella fior di latte, prosciutto cotto, salam picant napoli, carnati, busuioc",
@@ -98,7 +95,7 @@ export const CARNIVORA: MenuCategoryProduct = {
     ],
 } as const;
 
-export const BAMBINO: MenuCategoryProduct = {
+export const BAMBINO: TMenuProduct = {
     name: "Bambino",
     description:
         "sos de roșii, mozzarella fior di latte, prosciutto cotto, porumb, busuioc",
@@ -122,7 +119,7 @@ export const BAMBINO: MenuCategoryProduct = {
     ],
 } as const;
 
-export const PIZZAS: MenuCategoryProducts = [
+export const PIZZAS: TMenuCategory["products"] = [
     MARGARITA,
     PROSCIUTTO_E_FUNGHI,
     DIAVOLA,
