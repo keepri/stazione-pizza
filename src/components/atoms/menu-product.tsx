@@ -13,6 +13,8 @@ const UNIT: Readonly<Record<TMenuProductPriceWeightUnit, string>> = {
     gram: "gr",
 } as const;
 
+const WIDTH = 40;
+
 export function MenuProduct(props: TProps) {
     return (
         <li class="flex justify-between items-center gap-4 mb-5 font-dm-sans text-stz-dark">
@@ -25,7 +27,8 @@ export function MenuProduct(props: TProps) {
 
             <span
                 class={clsx(
-                    "flex justify-end items-center gap-4 w-40",
+                    "flex justify-end items-center gap-4",
+                    `w-${WIDTH}`,
                     props.prices.length > 1 && "justify-between",
                 )}
             >
@@ -39,7 +42,7 @@ function renderPrices(price: Accessor<TProps["prices"][number]>) {
     const { value, currency, weight } = price();
 
     return (
-        <span class="text-center w-20">
+        <span class={clsx("text-center", `w-${WIDTH / 2}`)}>
             <p class="font-bold text-xl">
                 {value} {currency}
             </p>

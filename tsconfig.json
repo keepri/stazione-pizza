@@ -12,7 +12,7 @@
         "resolveJsonModule": true,
         "jsx": "preserve",
         "jsxImportSource": "solid-js",
-        "types": ["vite/client"],
+        "types": ["vite-plugin-solid-svg/types-component-solid", "vite/client"],
         "alwaysStrict": true,
         "noEmit": true,
         "isolatedModules": true,

@@ -1,4 +1,5 @@
-import { Accessor, Index } from "solid-js";
+import { Accessor, Component, Index } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 import { PageTitle } from "../../components/atoms/page-title";
 import { Section } from "../../components/atoms/section";
@@ -39,7 +40,9 @@ export type TMenu = {
                 };
             }>;
         }>;
-        icons: ReadonlyArray<string>;
+        icons: ReadonlyArray<
+            string | Component<JSX.SvgSVGAttributes<SVGSVGElement>>
+        >;
     }>;
 };
 
