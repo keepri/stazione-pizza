@@ -1,4 +1,4 @@
-import { TMotive } from "../components/atoms/motive";
+import { TMotive } from "../components/molecules/motive";
 
 const MOTIVE_ONE: TMotive = {
     title: "Ingrediente proaspete și autentice",

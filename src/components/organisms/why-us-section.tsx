@@ -10,7 +10,7 @@ export function WhyUsSection() {
             <h2 class="text-7xl font-extrabold text-stz-dark mb-16">
                 De ce să ne alegi?
             </h2>
-            <ul class="flex flex-col gap-7">
+            <ul class="flex flex-col gap-12">
                 <Index each={MOTIVES} children={renderMotive} />
             </ul>
         </Section>

@@ -7,7 +7,7 @@ export function Contact() {
     return (
         <>
             <PageTitle>Contact</PageTitle>
-            <Section class="lg:flex justify-between">
+            <Section class="lg:flex justify-between gap-4">
                 <div class="max-lg:mb-16">
                     <div class="mb-16">
                         <H4 class="mb-4">Program</H4>

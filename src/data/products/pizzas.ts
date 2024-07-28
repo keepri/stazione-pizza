@@ -123,6 +123,6 @@ export const PIZZAS: TMenuCategory["products"] = [
     MARGARITA,
     PROSCIUTTO_E_FUNGHI,
     DIAVOLA,
-    CARNIVORA,
     BAMBINO,
+    CARNIVORA,
 ];

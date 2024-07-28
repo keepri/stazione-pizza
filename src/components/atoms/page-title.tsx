@@ -17,7 +17,7 @@ export function PageTitle(props: TProps) {
         <div class="flex justify-between items-center py-14">
             <h1
                 class={clsx(
-                    "text-8xl font-extrabold text-stz-dark px-36",
+                    "text-8xl font-extrabold text-stz-dark px-36 whitespace-nowrap",
                     isRight && "order-2",
                     isLeft && "order-1",
                 )}
