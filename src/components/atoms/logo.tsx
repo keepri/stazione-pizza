@@ -16,17 +16,18 @@ const sizes: Record<TSize, string> = {
 export function Logo(props: TProps) {
     props.size ??= "lg";
 
+    const resolved = children(() => props.children);
+
     const size = sizes[props.size];
     const containerStyles = "flex gap-5 justify-between items-center flex-wrap";
 
     const logo = (
         <img
-            class={`${size} rounded-full`}
+            class={`${size} rounded-full bg-transparent`}
             src="/src/assets/logo.svg"
             alt="Stazione logo"
         />
     );
-    const resolved = children(() => props.children);
 
     if (props.href) {
         return (
