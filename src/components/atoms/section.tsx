@@ -8,7 +8,10 @@ export function Section(props: TProps) {
     const resolved = children(() => local.children);
 
     return (
-        <section class={clsx("container py-20", local.class)} {...others}>
+        <section
+            class={clsx("container max-sm:py-14 py-20", local.class)}
+            {...others}
+        >
             {resolved()}
         </section>
     );

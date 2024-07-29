@@ -14,10 +14,10 @@ export function PageTitle(props: TProps) {
     const isRight = props.side === "right";
 
     return (
-        <div class="flex justify-between items-center py-14">
+        <div class="flex justify-between items-center max-lg:py-8 py-14">
             <h1
                 class={clsx(
-                    "text-8xl font-extrabold text-stz-dark px-36 whitespace-nowrap",
+                    "md:text-8xl text-6xl font-extrabold text-stz-dark md:px-32 sm:px-20 px-6 sm:whitespace-nowrap",
                     isRight && "order-2",
                     isLeft && "order-1",
                 )}
