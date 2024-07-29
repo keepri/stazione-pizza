@@ -1,4 +1,7 @@
-import { LEGAL_LINKS, NAV_LINKS } from "../../data/footer";
+import {
+    // LEGAL_LINKS,
+    NAV_LINKS,
+} from "../../data/footer";
 import { Path } from "../../routes/utils";
 import { Logo } from "../atoms/logo";
 import {
@@ -7,7 +10,7 @@ import {
 } from "../molecules/footer-link-group";
 
 const LINK_GROUP_TITLE_ONE: TFooterLinkGroupProps["title"] = "Stazione Pizza";
-const LINK_GROUP_TITLE_TWO: TFooterLinkGroupProps["title"] = "Legal stuff";
+// const LINK_GROUP_TITLE_TWO: TFooterLinkGroupProps["title"] = "Legal stuff";
 
 export function Footer() {
     return (
@@ -18,10 +21,13 @@ export function Footer() {
                         title={LINK_GROUP_TITLE_ONE}
                         links={NAV_LINKS}
                     />
-                    <FooterLinkGroup
-                        title={LINK_GROUP_TITLE_TWO}
-                        links={LEGAL_LINKS}
-                    />
+                    {/*
+                        TODO
+                        <FooterLinkGroup
+                            title={LINK_GROUP_TITLE_TWO}
+                            links={LEGAL_LINKS}
+                        />
+                    */}
                 </section>
                 <Logo href={Path.Home} size="xl" />
             </main>
