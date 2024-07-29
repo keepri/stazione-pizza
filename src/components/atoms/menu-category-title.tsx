@@ -8,10 +8,12 @@ type TProps = {
     icons: TMenuCategory["icons"];
 };
 
-const WIDTH = 40;
+const WIDTH = 20;
 
 export function MenuCategoryTitle(props: TProps) {
     const resolved = children(() => props.children);
+
+    const numberOfIcons = props.icons.length;
 
     return (
         <div class="flex justify-between items-center mb-7">
@@ -20,8 +22,8 @@ export function MenuCategoryTitle(props: TProps) {
                 <div
                     class={clsx(
                         "flex justify-end items-center gap-4",
-                        `w-${WIDTH}`,
                         props.icons.length > 1 && "justify-between",
+                        `w-${WIDTH * numberOfIcons}`,
                     )}
                 >
                     <Index each={props.icons} children={renderIcons} />
@@ -37,14 +39,14 @@ function renderIcons(icon: Accessor<TProps["icons"][number]>) {
 
     if (typeof Icon === "string") {
         return (
-            <span class={`w-${WIDTH / 2}`}>
+            <span class={`w-${WIDTH}`}>
                 <img class="mx-auto" width={size} height={size} src={Icon} />
             </span>
         );
     }
 
     return (
-        <span class={`w-${WIDTH / 2}`}>
+        <span class={`w-${WIDTH}`}>
             <Icon class="mx-auto" width={size} height={size} />
         </span>
     );
