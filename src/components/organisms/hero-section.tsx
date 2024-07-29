@@ -5,12 +5,12 @@ import { Section } from "../atoms/section";
 
 export function HeroSection() {
     return (
-        <Section class="flex max-xl:flex-wrap justify-between max-xl:gap-14 max-xl:max-w-xl">
-            <div class="max-w-prose">
-                <h1 class="mb-8 leading-tight text-8xl text-stz-dark font-poppins font-extrabold">
+        <Section class="flex max-lg:flex-wrap justify-between max-xl:gap-16">
+            <div class="max-w-[60ch]">
+                <h1 class="sm:mb-8 mb-4 leading-tight text-4xl sm:text-6xl xl:text-8xl text-stz-dark font-poppins font-extrabold">
                     Pizza <span class="text-stz-primary">Napoletană</span>
                 </h1>
-                <P class="mb-16 text-xl leading-relaxed">
+                <P class="sm:mb-16 mb-8 sm:text-xl leading-relaxed">
                     Descoperă adevărata pizza napoletană chiar în inima
                     Clujului! Fiecare pizza este pregătită cu ingrediente
                     autentice și multă pasiune, pentru a-ți oferi o experiență
@@ -21,7 +21,7 @@ export function HeroSection() {
             <img
                 width={550}
                 height={550}
-                class="max-lg:mx-auto"
+                class="max-xl:mx-auto max-sm:w-full max-xl:max-w-md"
                 src="src/assets/images/hero-pizza.png"
                 alt="pizza"
             />
