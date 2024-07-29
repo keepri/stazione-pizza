@@ -9,7 +9,7 @@ export type TProps = JSX.HTMLAttributes<HTMLUListElement> & {
 
 export function NavLinkGroup(props: TProps) {
     return (
-        <ul class={clsx("flex gap-2 flex-wrap", props.class)}>
+        <ul class={clsx("flex gap-2", props.class)}>
             <Index each={props.links} children={renderLinkList} />
         </ul>
     );
