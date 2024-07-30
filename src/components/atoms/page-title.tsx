@@ -27,8 +27,9 @@ export function PageTitle(props: TProps) {
             <div
                 class={clsx(
                     "w-full h-16 bg-stz-primary",
-                    isRight && "order-1 -translate-x-[132px]",
-                    isLeft && "order-2 translate-x-[132px]",
+                    isRight &&
+                        "order-1 sm:-translate-x-[132px] -translate-x-16",
+                    isLeft && "order-2 sm:translate-x-[132px] translate-x-16",
                 )}
             />
         </div>
