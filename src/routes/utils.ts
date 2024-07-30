@@ -1,9 +1,9 @@
 export enum Path {
     Home = "/",
-    Menu = "/menu",
-    About = "/about",
+    Menu = "/meniu",
+    About = "/despre-noi",
     Contact = "/contact",
     NotFound = "/404",
-    PrivacyPolicy = "/privacy-policy",
-    TermsAndConditions = "/terms-and-conditions",
+    // PrivacyPolicy = "/privacy-policy",
+    // TermsAndConditions = "/terms-and-conditions",
 }
