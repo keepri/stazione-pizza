@@ -26,24 +26,28 @@ function renderCategories(category: Accessor<TMenu["categories"][number]>) {
 }
 
 export type TMenu = {
-    categories: ReadonlyArray<{
-        title: string;
-        products: ReadonlyArray<{
-            name: string;
-            description?: string;
-            prices: ReadonlyArray<{
-                value: number;
-                currency: "ron";
-                weight?: {
-                    value: number;
-                    unit: TMenuProductPriceWeightUnit;
-                };
+    categories: ReadonlyArray<
+        Readonly<{
+            title: string;
+            products: ReadonlyArray<{
+                name: string;
+                description?: string;
+                prices: ReadonlyArray<
+                    Readonly<{
+                        value: number;
+                        currency: "ron";
+                        weight?: Readonly<{
+                            value: number;
+                            unit: TMenuProductPriceWeightUnit;
+                        }>;
+                    }>
+                >;
             }>;
-        }>;
-        icons: ReadonlyArray<
-            string | Component<JSX.SvgSVGAttributes<SVGSVGElement>>
-        >;
-    }>;
+            icons: ReadonlyArray<
+                string | Component<JSX.SvgSVGAttributes<SVGSVGElement>>
+            >;
+        }>
+    >;
 };
 
 export type TMenuCategory = Pick<TMenu, "categories">["categories"][number];
