@@ -20,22 +20,22 @@ export function MenuProduct(props: TProps) {
 
     return (
         <li class="flex justify-between items-center gap-4 mb-5 font-dm-sans text-stz-dark">
-            <span class="max-w-[45ch]">
+            <div class="max-w-[45ch]">
                 <h3 class="font-bold text-xl">{props.name}</h3>
                 <Show when={Boolean(props.description)}>
                     <p class="text-sm">{props.description}</p>
                 </Show>
-            </span>
+            </div>
 
-            <span
+            <div
                 class={clsx(
-                    "flex justify-end items-center gap-4",
-                    props.prices.length > 1 && "justify-between",
+                    "flex justify-end items-center gap-2",
+                    props.prices.length > 1 && "justify-around",
                     `w-${WIDTH * numberOfPrices}`,
                 )}
             >
                 <Index each={props.prices} children={renderPrices} />
-            </span>
+            </div>
         </li>
     );
 }
@@ -44,7 +44,7 @@ function renderPrices(price: Accessor<TProps["prices"][number]>) {
     const { value, currency, weight } = price();
 
     return (
-        <span class={clsx("text-center", `w-${WIDTH}`)}>
+        <div class={clsx("text-center", `w-${WIDTH}`)}>
             <p class="font-bold text-xl">
                 {value} {currency}
             </p>
@@ -53,6 +53,6 @@ function renderPrices(price: Accessor<TProps["prices"][number]>) {
                     {weight!.value} {UNIT[weight!.unit]}
                 </p>
             </Show>
-        </span>
+        </div>
     );
 }

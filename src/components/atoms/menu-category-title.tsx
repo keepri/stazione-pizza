@@ -21,8 +21,8 @@ export function MenuCategoryTitle(props: TProps) {
             <Show when={Boolean(props.icons.length)}>
                 <div
                     class={clsx(
-                        "flex justify-end items-center gap-4",
-                        props.icons.length > 1 && "justify-between",
+                        "flex justify-end items-center gap-2",
+                        props.icons.length > 1 && "justify-around",
                         `w-${WIDTH * numberOfIcons}`,
                     )}
                 >
@@ -39,15 +39,15 @@ function renderIcons(icon: Accessor<TProps["icons"][number]>) {
 
     if (typeof Icon === "string") {
         return (
-            <span class={`w-${WIDTH}`}>
+            <div class={`w-${WIDTH}`}>
                 <img class="mx-auto" width={size} height={size} src={Icon} />
-            </span>
+            </div>
         );
     }
 
     return (
-        <span class={`w-${WIDTH}`}>
+        <div class={`w-${WIDTH}`}>
             <Icon class="mx-auto" width={size} height={size} />
-        </span>
+        </div>
     );
 }
