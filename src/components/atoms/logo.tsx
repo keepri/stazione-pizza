@@ -24,7 +24,7 @@ export function Logo(props: TProps) {
     const logo = (
         <img
             class={`${size} rounded-full bg-transparent`}
-            src="/src/assets/logo.svg"
+            src="src/assets/logo.svg"
             alt="Stazione logo"
         />
     );
