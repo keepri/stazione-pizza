@@ -1,5 +1,6 @@
 import { A } from "@solidjs/router";
 
+import locationMapUrl from "../../assets/images/location.png";
 import { H4 } from "../../components/atoms/heading-four";
 import { PageTitle } from "../../components/atoms/page-title";
 import { P } from "../../components/atoms/paragraph";
@@ -43,7 +44,7 @@ function LocationMap() {
             <img
                 width={700}
                 class="max-w-full"
-                src="src/assets/images/location.png"
+                src={locationMapUrl}
                 alt="location on maps"
             />
         </A>

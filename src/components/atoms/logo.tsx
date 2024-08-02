@@ -1,6 +1,9 @@
 import { A } from "@solidjs/router";
 import { ParentProps, children } from "solid-js";
 
+// TODO make this into a svg component
+import logoUrl from "../../assets/logo.svg?url";
+
 type TSize = "lg" | "xl";
 
 type TProps = ParentProps & {
@@ -24,7 +27,7 @@ export function Logo(props: TProps) {
     const logo = (
         <img
             class={`${size} rounded-full bg-transparent`}
-            src="src/assets/logo.svg"
+            src={logoUrl}
             alt="Stazione logo"
         />
     );

@@ -1,3 +1,4 @@
+import pizzaUrl from "../../assets/images/hero-pizza.png";
 import { Path } from "../../routes/utils";
 import { ButtonLink } from "../atoms/button-link";
 import { P } from "../atoms/paragraph";
@@ -22,7 +23,7 @@ export function HeroSection() {
                 width={550}
                 height={550}
                 class="max-xl:mx-auto max-sm:w-full max-xl:max-w-md"
-                src="src/assets/images/hero-pizza.png"
+                src={pizzaUrl}
                 alt="pizza"
             />
         </Section>

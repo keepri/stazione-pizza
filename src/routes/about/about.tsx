@@ -1,3 +1,4 @@
+import aboutImageUrl from "../../assets/images/about.jpg";
 import { H4 } from "../../components/atoms/heading-four";
 import { PageTitle } from "../../components/atoms/page-title";
 import { P } from "../../components/atoms/paragraph";
@@ -21,7 +22,7 @@ function AboutImage() {
             <img
                 width={400}
                 class="max-w-full rounded-2xl"
-                src="src/assets/images/about.jpg"
+                src={aboutImageUrl}
             />
         </span>
     );
