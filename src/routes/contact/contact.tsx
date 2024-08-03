@@ -1,7 +1,6 @@
-import { A } from "@solidjs/router";
-
 import locationMapUrl from "../../assets/images/location.png";
 import { H4 } from "../../components/atoms/heading-four";
+import { Link } from "../../components/atoms/link";
 import { PageTitle } from "../../components/atoms/page-title";
 import { P } from "../../components/atoms/paragraph";
 import { Section } from "../../components/atoms/section";
@@ -40,13 +39,13 @@ function ContactInfo() {
 
 function LocationMap() {
     return (
-        <A href={STAZIONE_GOOGLE_MAPS} target="_blank">
+        <Link href={STAZIONE_GOOGLE_MAPS} target="_blank">
             <img
                 width={700}
                 class="max-w-full"
                 src={locationMapUrl}
                 alt="location on maps"
             />
-        </A>
+        </Link>
     );
 }

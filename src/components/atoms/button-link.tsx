@@ -1,22 +1,19 @@
-import { A, AnchorProps } from "@solidjs/router";
-import clsx from "clsx";
-import { ParentProps, children, splitProps } from "solid-js";
+import { AnchorProps } from "@solidjs/router";
+import { ParentProps, splitProps } from "solid-js";
 
 import { BUTTON_STYLES } from "./button";
+import { Link } from "./link";
 
-type TProps = ParentProps & AnchorProps;
+type TProps = ParentProps & {
+    href: AnchorProps["href"];
+};
 
 export function ButtonLink(props: TProps) {
-    const [local, others] = splitProps(props, ["href", "children", "class"]);
-    const resolved = children(() => local.children);
+    const [local, others] = splitProps(props, ["href"]);
 
     return (
-        <A
-            href={local.href}
-            class={clsx(BUTTON_STYLES, local.class)}
-            {...others}
-        >
-            {resolved()}
-        </A>
+        <Link href={local.href} class={BUTTON_STYLES} {...others}>
+            {props.children}
+        </Link>
     );
 }

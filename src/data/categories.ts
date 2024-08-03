@@ -9,16 +9,19 @@ import { SANDWICHES } from "./products/sandwiches";
 
 export const CATEGORIES: TMenu["categories"] = [
     {
+        slug: "pizza",
         title: "PIZZA",
         icons: [PizzaSliceSVG, PizzaWholeSVG] as const,
         products: PIZZAS,
     } as const,
     {
+        slug: "panuozzo",
         title: "SANDWICH NAPOLITAN PANUOZZO",
         icons: [PaniniSVG] as const,
         products: SANDWICHES,
     } as const,
     {
+        slug: "diverse",
         title: "DIVERSE",
         icons: [SaucesSVG] as const,
         products: DIVERSE,

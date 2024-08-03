@@ -1,8 +1,8 @@
-import { A } from "@solidjs/router";
 import { ParentProps, children } from "solid-js";
 
 // TODO make this into a svg component
 import logoUrl from "../../assets/logo.svg?url";
+import { Link } from "./link";
 
 type TSize = "lg" | "xl";
 
@@ -19,8 +19,6 @@ const sizes: Record<TSize, string> = {
 export function Logo(props: TProps) {
     props.size ??= "lg";
 
-    const resolved = children(() => props.children);
-
     const size = sizes[props.size];
     const containerStyles = "flex gap-5 justify-between items-center flex-wrap";
 
@@ -34,12 +32,14 @@ export function Logo(props: TProps) {
 
     if (props.href) {
         return (
-            <A href={props.href} class={containerStyles}>
+            <Link href={props.href} class={containerStyles}>
                 {logo}
-                {resolved()}
-            </A>
+                {props.children}
+            </Link>
         );
     }
+
+    const resolved = children(() => props.children);
 
     return (
         <span class={containerStyles}>

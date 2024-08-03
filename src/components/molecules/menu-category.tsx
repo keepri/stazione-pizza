@@ -8,7 +8,7 @@ type TProps = TMenuCategory;
 
 export function MenuCategory(props: TProps) {
     return (
-        <div class="max-w-screen-md">
+        <div id={props.slug} class="max-w-screen-md scroll-m-20 sm:scroll-m-44">
             <MenuCategoryTitle icons={props.icons}>
                 {props.title}
             </MenuCategoryTitle>

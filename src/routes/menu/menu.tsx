@@ -16,11 +16,16 @@ export function Menu() {
 }
 
 function renderCategories(category: Accessor<TMenu["categories"][number]>) {
-    const { title, products, icons } = category();
+    const { slug, title, products, icons } = category();
 
     return (
         <Section>
-            <MenuCategory title={title} products={products} icons={icons} />
+            <MenuCategory
+                slug={slug}
+                title={title}
+                products={products}
+                icons={icons}
+            />
         </Section>
     );
 }
@@ -28,6 +33,7 @@ function renderCategories(category: Accessor<TMenu["categories"][number]>) {
 export type TMenu = {
     categories: ReadonlyArray<
         Readonly<{
+            slug: string;
             title: string;
             products: ReadonlyArray<{
                 name: string;

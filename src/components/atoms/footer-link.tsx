@@ -1,27 +1,18 @@
-import { A, useLocation } from "@solidjs/router";
-import { clsx } from "clsx";
-import { ParentProps, children } from "solid-js";
+import { AnchorProps } from "@solidjs/router";
+import { ParentProps } from "solid-js";
+
+import { Link } from "./link";
 
 export type TProps = ParentProps & {
-    href: string;
+    href: AnchorProps["href"];
 };
 
 export function FooterLink(props: TProps) {
-    const resolved = children(() => props.children);
-    const location = useLocation();
-
     return (
         <li>
-            <A
-                href={props.href}
-                class={clsx(
-                    "font-dm-sans hover:underline",
-                    location.pathname === props.href &&
-                        "underline underline-offset-4",
-                )}
-            >
-                {resolved()}
-            </A>
+            <Link showActive href={props.href} class="hover:underline">
+                {props.children}
+            </Link>
         </li>
     );
 }
