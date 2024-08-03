@@ -10,11 +10,11 @@ export function Navbar() {
     const showLogo = useShowLogo();
 
     return (
-        <nav class="sticky top-0 py-4 z-50 bg-stz-background">
-            <main class="container flex flex-wrap max-sm:justify-center justify-between items-center gap-4">
+        <nav class="sticky top-0 z-50 bg-stz-background py-4">
+            <main class="container flex flex-wrap items-center justify-between gap-4 max-sm:justify-center">
                 <Show when={showLogo()}>
                     <Logo href={Path.Home}>
-                        <h1 class="text-lg text-stz-dark font-bold font-poppins max-sm:hidden">
+                        <h1 class="font-poppins text-lg font-bold text-stz-dark max-sm:hidden">
                             Stazione Pizza
                         </h1>
                     </Logo>

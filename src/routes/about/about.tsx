@@ -8,7 +8,7 @@ export function About() {
     return (
         <>
             <PageTitle>Despre noi</PageTitle>
-            <Section class="flex max-lg:flex-wrap max-sm:gap-16 gap-24">
+            <Section class="flex gap-24 max-lg:flex-wrap max-sm:gap-16">
                 <AboutImage />
                 <AboutInfo />
             </Section>
@@ -18,7 +18,7 @@ export function About() {
 
 function AboutImage() {
     return (
-        <span class="max-lg:order-2 order-1 max-lg:mx-auto">
+        <span class="order-1 max-lg:order-2 max-lg:mx-auto">
             <img
                 width={400}
                 class="max-w-full rounded-2xl"
@@ -30,7 +30,7 @@ function AboutImage() {
 
 function AboutInfo() {
     return (
-        <div class="max-lg:order-1 order-2">
+        <div class="order-2 max-lg:order-1">
             <div class="mb-16">
                 <H4 class="mb-4">Cine suntem</H4>
                 <P class="max-w-[55ch]">

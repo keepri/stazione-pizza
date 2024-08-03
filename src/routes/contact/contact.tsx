@@ -13,7 +13,7 @@ export function Contact() {
     return (
         <>
             <PageTitle>Contact</PageTitle>
-            <Section class="lg:flex justify-between gap-4">
+            <Section class="justify-between gap-4 lg:flex">
                 <ContactInfo />
                 <LocationMap />
             </Section>

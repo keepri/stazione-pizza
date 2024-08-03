@@ -16,12 +16,12 @@ export function MenuCategoryTitle(props: TProps) {
     const numberOfIcons = props.icons.length;
 
     return (
-        <div class="flex justify-between items-center mb-7">
-            <h2 class="font-dolmen text-stz-primary text-3xl">{resolved()}</h2>
+        <div class="mb-7 flex items-center justify-between">
+            <h2 class="font-dolmen text-3xl text-stz-primary">{resolved()}</h2>
             <Show when={Boolean(props.icons.length)}>
                 <div
                     class={clsx(
-                        "flex justify-end items-center gap-2",
+                        "flex items-center justify-end gap-2",
                         props.icons.length > 1 && "justify-around",
                         `w-${WIDTH * numberOfIcons}`,
                     )}

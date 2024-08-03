@@ -17,7 +17,7 @@ export function NavLink(props: TProps) {
             <A
                 href={props.href}
                 class={clsx(
-                    "py-2 px-4 text-lg text-stz-dark",
+                    "px-4 py-2 text-lg text-stz-dark",
                     location.pathname === props.href &&
                         "underline underline-offset-4",
                 )}

@@ -7,7 +7,7 @@ export function Root(props: ParentProps) {
     const resolved = children(() => props.children);
 
     return (
-        <main class="flex flex-col min-h-screen">
+        <main class="flex min-h-screen flex-col">
             <Navbar />
             {resolved()}
             <Footer />

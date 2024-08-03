@@ -14,8 +14,8 @@ const LINK_GROUP_TITLE_ONE: TFooterLinkGroupProps["title"] = "Stazione Pizza";
 
 export function Footer() {
     return (
-        <footer class="bg-stz-primary py-12 mt-auto">
-            <main class="container flex flex-wrap gap-8 justify-between">
+        <footer class="mt-auto bg-stz-primary py-12">
+            <main class="container flex flex-wrap justify-between gap-8">
                 <FooterLinkGroup
                     title={LINK_GROUP_TITLE_ONE}
                     links={NAV_LINKS}

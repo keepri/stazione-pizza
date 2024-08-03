@@ -14,10 +14,10 @@ export function PageTitle(props: TProps) {
     const isRight = props.side === "right";
 
     return (
-        <div class="container flex justify-between items-center sm:py-14 py-8">
+        <div class="container flex items-center justify-between py-8 sm:py-14">
             <h1
                 class={clsx(
-                    "md:text-8xl text-6xl font-extrabold text-stz-dark sm:whitespace-nowrap",
+                    "text-6xl font-extrabold text-stz-dark sm:whitespace-nowrap md:text-8xl",
                     isRight && "order-2",
                     isLeft && "order-1",
                 )}
@@ -26,10 +26,10 @@ export function PageTitle(props: TProps) {
             </h1>
             <div
                 class={clsx(
-                    "w-full h-16 bg-stz-primary",
+                    "h-16 w-full bg-stz-primary",
                     isRight &&
-                        "order-1 sm:-translate-x-[132px] -translate-x-16",
-                    isLeft && "order-2 sm:translate-x-[132px] translate-x-16",
+                        "order-1 -translate-x-16 sm:-translate-x-[132px]",
+                    isLeft && "order-2 translate-x-16 sm:translate-x-[132px]",
                 )}
             />
         </div>
