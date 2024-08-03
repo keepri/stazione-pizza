@@ -8,7 +8,6 @@ export default defineConfig({
         port: 3000,
     },
     build: {
-        assetsDir: "assets",
         target: "esnext",
     },
 });
