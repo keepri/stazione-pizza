@@ -1,8 +1,8 @@
 import { AnchorProps } from "@solidjs/router";
 import { ParentProps, splitProps } from "solid-js";
 
-import { BUTTON_STYLES } from "./button";
-import { Link } from "./link";
+import { BUTTON_STYLES } from "../atoms/button";
+import { Link } from "../atoms/link";
 
 type TProps = ParentProps & {
     href: AnchorProps["href"];

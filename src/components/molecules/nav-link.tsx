@@ -1,7 +1,7 @@
 import { ParentProps } from "solid-js";
 
 import { Path } from "../../routes/utils";
-import { Link } from "./link";
+import { Link } from "../atoms/link";
 
 export type TProps = ParentProps & {
     href: Path;

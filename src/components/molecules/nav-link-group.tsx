@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Accessor, Index, JSX } from "solid-js";
 
-import { NavLink, TProps as TNavLinkProps } from "../atoms/nav-link";
+import { NavLink, TProps as TNavLinkProps } from "../molecules/nav-link";
 
 export type TProps = JSX.HTMLAttributes<HTMLUListElement> & {
     links: ReadonlyArray<TNavLinkProps>;

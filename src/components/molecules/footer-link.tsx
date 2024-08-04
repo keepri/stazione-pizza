@@ -1,7 +1,7 @@
 import { AnchorProps } from "@solidjs/router";
 import { ParentProps } from "solid-js";
 
-import { Link } from "./link";
+import { Link } from "../atoms/link";
 
 export type TProps = ParentProps & {
     href: AnchorProps["href"];

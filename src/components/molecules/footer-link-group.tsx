@@ -1,6 +1,9 @@
 import { Accessor, Index } from "solid-js";
 
-import { FooterLink, TProps as TFooterLinkProps } from "../atoms/footer-link";
+import {
+    FooterLink,
+    TProps as TFooterLinkProps,
+} from "../molecules/footer-link";
 
 export type TProps = {
     title: string;

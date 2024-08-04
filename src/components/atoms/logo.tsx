@@ -1,14 +1,12 @@
-import { ParentProps, children } from "solid-js";
+import { clsx } from "clsx";
 
 // TODO make this into a svg component
 import logoUrl from "../../assets/logo.svg?url";
-import { Link } from "./link";
 
 type TSize = "lg" | "xl";
 
-type TProps = ParentProps & {
+export type TProps = {
     size?: TSize;
-    href?: string;
 };
 
 const sizes: Record<TSize, string> = {
@@ -17,34 +15,13 @@ const sizes: Record<TSize, string> = {
 } as const;
 
 export function Logo(props: TProps) {
-    props.size ??= "lg";
+    const size = props.size ?? "lg";
 
-    const size = sizes[props.size];
-    const containerStyles = "flex gap-5 justify-between items-center flex-wrap";
-
-    const logo = (
+    return (
         <img
-            class={`${size} rounded-full bg-transparent`}
+            class={clsx(sizes[size], "rounded-full bg-transparent")}
             src={logoUrl}
             alt="Stazione logo"
         />
-    );
-
-    if (props.href) {
-        return (
-            <Link href={props.href} class={containerStyles}>
-                {logo}
-                {props.children}
-            </Link>
-        );
-    }
-
-    const resolved = children(() => props.children);
-
-    return (
-        <span class={containerStyles}>
-            {logo}
-            {resolved()}
-        </span>
     );
 }

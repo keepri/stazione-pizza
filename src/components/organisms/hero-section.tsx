@@ -1,8 +1,8 @@
 import pizzaUrl from "../../assets/images/hero-pizza.png";
 import { Path } from "../../routes/utils";
-import { ButtonLink } from "../atoms/button-link";
 import { P } from "../atoms/paragraph";
 import { Section } from "../atoms/section";
+import { ButtonLink } from "../molecules/button-link";
 
 export function HeroSection() {
     return (
