@@ -7,8 +7,8 @@ import { ButtonLink } from "../molecules/button-link";
 export function HeroSection() {
     return (
         <Section class="flex justify-between max-xl:gap-16 max-lg:flex-wrap">
-            <div class="max-w-[60ch]">
-                <h1 class="mb-4 font-poppins text-4xl font-extrabold leading-tight text-stz-dark sm:mb-8 sm:text-6xl xl:text-8xl">
+            <div class="my-auto max-w-[60ch]">
+                <h1 class="mb-4 font-poppins text-5xl font-extrabold leading-tight text-stz-dark sm:mb-8 sm:text-6xl xl:text-8xl">
                     Pizza <span class="text-stz-primary">Napoletană</span>
                 </h1>
                 <P class="mb-8 leading-relaxed sm:mb-16 sm:text-xl">

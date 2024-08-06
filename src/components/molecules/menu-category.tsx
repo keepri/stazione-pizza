@@ -12,10 +12,10 @@ export function MenuCategory(props: TProps) {
             id={props.slug!}
             class="max-w-screen-md scroll-m-20 sm:scroll-m-44"
         >
-            <MenuCategoryTitle icons={props.icons}>
+            <MenuCategoryTitle class="mb-7" icons={props.icons}>
                 {props.title}
             </MenuCategoryTitle>
-            <ul>
+            <ul class="flex flex-col gap-6">
                 <Index each={props.products} children={renderMenuCategory} />
             </ul>
         </div>

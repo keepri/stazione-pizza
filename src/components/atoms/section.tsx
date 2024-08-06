@@ -9,7 +9,7 @@ export function Section(props: TProps) {
 
     return (
         <section
-            class={clsx("container py-8 sm:py-20", local.class)}
+            class={clsx(local.class, "container pb-8 pt-8 sm:pb-16 sm:pt-16")}
             {...others}
         >
             {resolved()}

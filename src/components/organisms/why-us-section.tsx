@@ -6,7 +6,7 @@ import { Motive, TMotive } from "../molecules/motive";
 
 export function WhyUsSection() {
     return (
-        <Section>
+        <Section class="max-sm:pb-24 sm:pb-32">
             <h2 class="mb-8 text-4xl font-extrabold text-stz-dark sm:mb-16 sm:text-7xl">
                 De ce să ne alegi?
             </h2>

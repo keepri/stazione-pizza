@@ -8,23 +8,11 @@ export function About() {
     return (
         <>
             <PageTitle>Despre noi</PageTitle>
-            <Section class="flex gap-24 max-lg:flex-wrap max-sm:gap-16">
+            <Section class="flex gap-24 max-lg:flex-wrap max-sm:gap-16 max-sm:pb-24 sm:pb-32">
                 <AboutImage />
                 <AboutInfo />
             </Section>
         </>
-    );
-}
-
-function AboutImage() {
-    return (
-        <span class="order-1 max-lg:order-2 max-lg:mx-auto">
-            <img
-                width={400}
-                class="max-w-full rounded-2xl"
-                src={aboutImageUrl}
-            />
-        </span>
     );
 }
 
@@ -50,5 +38,17 @@ function AboutInfo() {
                 </P>
             </div>
         </div>
+    );
+}
+
+function AboutImage() {
+    return (
+        <span class="order-1 max-lg:order-2 max-lg:mx-auto">
+            <img
+                width={275}
+                class="max-w-full rounded-2xl"
+                src={aboutImageUrl}
+            />
+        </span>
     );
 }

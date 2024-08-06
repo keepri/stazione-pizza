@@ -1,11 +1,13 @@
 import { clsx } from "clsx";
+import { splitProps } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 // TODO make this into a svg component
 import logoUrl from "../../assets/logo.svg?url";
 
 type TSize = "lg" | "xl";
 
-export type TProps = {
+export type TProps = JSX.HTMLAttributes<HTMLImageElement> & {
     size?: TSize;
 };
 
@@ -15,13 +17,16 @@ const sizes: Record<TSize, string> = {
 } as const;
 
 export function Logo(props: TProps) {
-    const size = props.size ?? "lg";
+    const [local, others] = splitProps(props, ["size", "class"]);
+
+    const size = local.size ?? "lg";
 
     return (
         <img
-            class={clsx(sizes[size], "rounded-full bg-transparent")}
+            class={clsx(local.class, sizes[size], "rounded-full")}
             src={logoUrl}
             alt="Stazione logo"
+            {...others}
         />
     );
 }

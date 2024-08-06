@@ -25,7 +25,11 @@ export function Footer() {
                     title={LINK_GROUP_TITLE_TWO}
                     links={LEGAL_LINKS}
                 /> */}
-                <LogoLink href={Path.Home} size="xl" />
+                <LogoLink
+                    href={Path.Home}
+                    size="xl"
+                    LogoProps={{ class: "bg-stz-primary" }}
+                />
             </main>
         </footer>
     );

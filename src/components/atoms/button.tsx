@@ -11,7 +11,7 @@ export function Button(props: TProps) {
     const resolved = children(() => local.children);
 
     return (
-        <button class={clsx(BUTTON_STYLES, local.class)} {...others}>
+        <button class={clsx(local.class, BUTTON_STYLES)} {...others}>
             {resolved()}
         </button>
     );

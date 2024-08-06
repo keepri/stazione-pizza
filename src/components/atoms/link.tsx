@@ -26,9 +26,9 @@ export function Link(props: TProps) {
         <A
             href={local.href}
             class={clsx(
+                local.class,
                 "font-dm-sans",
                 isActive() && "underline underline-offset-4",
-                local.class,
             )}
             {...others}
         >

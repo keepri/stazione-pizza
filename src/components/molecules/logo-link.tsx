@@ -6,6 +6,7 @@ import { Logo, TProps as TLogoProps } from "../atoms/logo";
 type TProps = ParentProps & {
     href: string;
     size?: TLogoProps["size"];
+    LogoProps?: TLogoProps;
 };
 
 export function LogoLink(props: TProps) {
@@ -16,7 +17,7 @@ export function LogoLink(props: TProps) {
             href={props.href}
             class="flex flex-wrap items-center justify-between gap-5"
         >
-            <Logo size={props.size} />
+            <Logo size={props.size} {...props.LogoProps} />
             {resolved()}
         </Link>
     );

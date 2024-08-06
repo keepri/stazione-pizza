@@ -10,8 +10,8 @@ export function H4(props: TProps) {
     return (
         <h4
             class={clsx(
-                "text-xl font-extrabold text-stz-primary sm:text-3xl",
                 local.class,
+                "text-3xl font-extrabold text-stz-primary",
             )}
             {...others}
         >

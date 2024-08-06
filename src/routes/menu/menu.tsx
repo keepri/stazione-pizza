@@ -6,6 +6,8 @@ import { MenuCategory } from "../../components/molecules/menu-category";
 import { CATEGORIES } from "../../data/categories";
 import { TMenu } from "../../types/menu";
 
+const NUMBER_OF_CATEGORIES = CATEGORIES.length;
+
 export function Menu() {
     return (
         <>
@@ -15,11 +17,15 @@ export function Menu() {
     );
 }
 
-function renderCategories(category: Accessor<TMenu["categories"][number]>) {
+function renderCategories(
+    category: Accessor<TMenu["categories"][number]>,
+    index: number,
+) {
+    const isLast = index === NUMBER_OF_CATEGORIES - 1;
     const { slug, title, products, icons } = category();
 
     return (
-        <Section>
+        <Section class={isLast ? "max-sm:pb-24 sm:pb-32" : undefined}>
             <MenuCategory
                 slug={slug}
                 title={title}

@@ -12,7 +12,7 @@ export function Contact() {
     return (
         <>
             <PageTitle>Contact</PageTitle>
-            <Section class="justify-between gap-4 lg:flex">
+            <Section class="justify-between gap-4 max-sm:pb-24 sm:pb-32 lg:flex">
                 <ContactInfo />
                 <LocationMap />
             </Section>
@@ -22,8 +22,8 @@ export function Contact() {
 
 function ContactInfo() {
     return (
-        <div class="max-lg:mb-16">
-            <div class="mb-16">
+        <div class="flex flex-wrap gap-16 max-lg:mb-16">
+            <div>
                 <H4 class="mb-4">Program</H4>
                 <P class="font-bold">luni - vineri: 8-20</P>
                 <P>sâmbătă - duminică: închis</P>

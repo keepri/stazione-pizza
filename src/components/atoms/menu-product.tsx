@@ -3,6 +3,10 @@ import { Accessor, Index, Show } from "solid-js";
 
 import { TMenuProduct } from "../../types/menu";
 import { TWeightUnit } from "../../types/product";
+import {
+    MENU_DOUBLE_ICON_WIDTH,
+    MENU_SINGLE_ICON_WIDTH,
+} from "../../utils/constants";
 import { isObject } from "../../utils/object";
 
 type TProps = TMenuProduct;
@@ -12,28 +16,34 @@ const UNIT: Readonly<Record<TWeightUnit, string>> = {
     g: "gr",
 } as const;
 
-const WIDTH = 20;
-
 export function MenuProduct(props: TProps) {
     const numberOfVariants = props.variants.length;
 
+    const hasIngredients = Boolean(props.ingredients);
+    const hasDescription = Boolean(props.description);
+    const hasVariants = props.variants.length > 1;
+
     return (
-        <li class="mb-5 flex items-start justify-between gap-4 font-dm-sans text-stz-dark">
+        <li class="flex items-start justify-between gap-4 font-dm-sans text-stz-dark">
             <div class="max-w-[45ch]">
                 <h3 class="text-xl font-bold">{props.name}</h3>
-                <Show when={Boolean(props.ingredients)}>
+                <Show when={hasIngredients}>
                     <p class="text-sm">{props.ingredients}</p>
                 </Show>
-                <Show when={Boolean(props.description)}>
-                    <p class="mt-2">{props.description}</p>
+                <Show when={hasDescription}>
+                    <p class={clsx(hasIngredients && "mt-2")}>
+                        {props.description}
+                    </p>
                 </Show>
             </div>
 
             <div
                 class={clsx(
                     "flex items-center justify-end gap-2",
-                    props.variants.length > 1 && "justify-around",
-                    `w-${WIDTH * numberOfVariants}`,
+                    hasVariants && "justify-around",
+                    numberOfVariants === 2
+                        ? `w-${MENU_DOUBLE_ICON_WIDTH}`
+                        : `w-${MENU_SINGLE_ICON_WIDTH}`,
                 )}
             >
                 <Index each={props.variants} children={renderVariants} />
@@ -49,7 +59,7 @@ function renderVariants(variant: Accessor<TProps["variants"][number]>) {
     } = variant();
 
     return (
-        <div class={clsx("text-center", `w-${WIDTH}`)}>
+        <div class="w-20 text-center">
             <p class="text-xl font-bold">{priceValue}</p>
             <Show when={isObject(weight)}>
                 <p class="text-sm">
