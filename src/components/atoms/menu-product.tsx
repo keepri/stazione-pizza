@@ -18,7 +18,7 @@ export function MenuProduct(props: TProps) {
     const numberOfVariants = props.variants.length;
 
     return (
-        <li class="mb-5 flex items-center justify-between gap-4 font-dm-sans text-stz-dark">
+        <li class="mb-5 flex items-start justify-between gap-4 font-dm-sans text-stz-dark">
             <div class="max-w-[45ch]">
                 <h3 class="text-xl font-bold">{props.name}</h3>
                 <Show when={Boolean(props.ingredients)}>
@@ -44,18 +44,17 @@ export function MenuProduct(props: TProps) {
 
 function renderVariants(variant: Accessor<TProps["variants"][number]>) {
     const {
-        price: { value: priceValue, currency },
+        price: { value: priceValue },
         weight,
     } = variant();
 
     return (
         <div class={clsx("text-center", `w-${WIDTH}`)}>
-            <p class="text-xl font-bold">
-                {priceValue} {currency}
-            </p>
+            <p class="text-xl font-bold">{priceValue}</p>
             <Show when={isObject(weight)}>
                 <p class="text-sm">
-                    {weight!.value} {UNIT[weight!.unit]}
+                    {weight!.value}
+                    {UNIT[weight!.unit]}
                 </p>
             </Show>
         </div>
