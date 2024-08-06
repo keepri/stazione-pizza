@@ -1,6 +1,6 @@
 import { Accessor, Index } from "solid-js";
 
-import { TMenuCategory } from "../../routes/menu/menu";
+import { TMenuCategory } from "../../types/menu";
 import { MenuCategoryTitle } from "../atoms/menu-category-title";
 import { MenuProduct } from "../atoms/menu-product";
 
@@ -8,7 +8,10 @@ type TProps = TMenuCategory;
 
 export function MenuCategory(props: TProps) {
     return (
-        <div id={props.slug} class="max-w-screen-md scroll-m-20 sm:scroll-m-44">
+        <div
+            id={props.slug!}
+            class="max-w-screen-md scroll-m-20 sm:scroll-m-44"
+        >
             <MenuCategoryTitle icons={props.icons}>
                 {props.title}
             </MenuCategoryTitle>
@@ -20,9 +23,14 @@ export function MenuCategory(props: TProps) {
 }
 
 function renderMenuCategory(product: Accessor<TProps["products"][number]>) {
-    const { name, description, prices } = product();
+    const { name, description, ingredients, variants } = product();
 
     return (
-        <MenuProduct name={name} description={description} prices={prices} />
+        <MenuProduct
+            name={name}
+            description={description}
+            ingredients={ingredients}
+            variants={variants}
+        />
     );
 }

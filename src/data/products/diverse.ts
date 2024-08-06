@@ -1,55 +1,53 @@
-import { TMenuCategory } from "../../routes/menu/menu";
+import { TMenuCategory } from "../../types/menu";
+import { SOS_ALB } from "./recipes";
 
 export const DIVERSE: TMenuCategory["products"] = [
     {
         name: "Sos roșii",
         description: "dulce / picant",
-        prices: [
+        ingredients: null,
+        variants: [
             {
-                value: 4,
-                currency: "ron",
-                weight: {
-                    value: 50,
-                    unit: "milliliter",
-                },
-            },
-        ],
+                name: null,
+                price: { value: 4, currency: "ron" } as const,
+                weight: { value: 50, unit: "ml" } as const,
+            } as const,
+        ] as const,
     } as const,
     {
         name: "Sos alb",
-        description: "iaurt, maoineză, usturoi",
-        prices: [
+        description: null,
+        ingredients: SOS_ALB.join(", "),
+        variants: [
             {
-                value: 4,
-                currency: "ron",
-                weight: {
-                    value: 50,
-                    unit: "milliliter",
-                },
-            },
-        ],
+                name: null,
+                price: { value: 4, currency: "ron" } as const,
+                weight: { value: 50, unit: "ml" } as const,
+            } as const,
+        ] as const,
     } as const,
     {
         name: "Ulei aromatizat",
         description: "picant / usturoi",
-        prices: [
+        ingredients: null,
+        variants: [
             {
-                value: 4,
-                currency: "ron",
-                weight: {
-                    value: 50,
-                    unit: "milliliter",
-                },
-            },
-        ],
+                name: null,
+                price: { value: 4, currency: "ron" } as const,
+                weight: { value: 50, unit: "ml" } as const,
+            } as const,
+        ] as const,
     } as const,
     {
         name: "Ambalaj pizza",
-        prices: [
+        description: null,
+        ingredients: null,
+        variants: [
             {
-                value: 2,
-                currency: "ron",
-            },
-        ],
+                name: null,
+                price: { value: 2, currency: "ron" } as const,
+                weight: null,
+            } as const,
+        ] as const,
     } as const,
 ] as const;

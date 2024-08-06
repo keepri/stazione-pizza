@@ -1,33 +1,29 @@
-import { TMenuCategory } from "../../routes/menu/menu";
+import { TMenuCategory } from "../../types/menu";
+import { PANUOZZO_CAPRESE, PANUOZZO_PROSCIUTTO } from "./recipes";
 
 export const SANDWICHES: TMenuCategory["products"] = [
     {
         name: "Prosciutto Panuozzo",
-        description:
-            "mozzarella fior di latte, roșii, rucola, prosciutto cotto, ulei masline",
-        prices: [
+        description: null,
+        ingredients: PANUOZZO_PROSCIUTTO.join(", "),
+        variants: [
             {
-                value: 21,
-                currency: "ron",
-                weight: {
-                    value: 200,
-                    unit: "gram",
-                },
-            },
-        ],
+                name: null,
+                price: { value: 21, currency: "ron" } as const,
+                weight: { value: 200, unit: "g" } as const,
+            } as const,
+        ] as const,
     } as const,
     {
         name: "Caprese Panuozzo (vegetarian)",
-        description: "mozzarella fior di latte, roșii, ulei măsline, busuioc",
-        prices: [
+        description: null,
+        ingredients: PANUOZZO_CAPRESE.join(", "),
+        variants: [
             {
-                value: 19,
-                currency: "ron",
-                weight: {
-                    value: 200,
-                    unit: "gram",
-                },
-            },
-        ],
+                name: null,
+                price: { value: 19, currency: "ron" } as const,
+                weight: { value: 200, unit: "g" } as const,
+            } as const,
+        ] as const,
     } as const,
 ] as const;

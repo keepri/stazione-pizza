@@ -1,119 +1,92 @@
-import { TMenuCategory } from "../../routes/menu/menu";
+import { TMenuCategory } from "../../types/menu";
+import {
+    BAMBINO,
+    CARNIVORA,
+    DIAVOLA,
+    MARGHERITA,
+    PROSCIUTTO_E_FUNGHI,
+} from "./recipes";
+
+const MARGHERITA_NAME = "Margherita";
+const PROSCIUTTO_E_FUNGHI_NAME = "Prosciutto e Funghi";
+const DIAVOLA_NAME = "Diavola";
+const BAMBINO_NAME = "Bambino";
+const CARNIVORA_NAME = "Carnivora";
 
 export const PIZZAS: TMenuCategory["products"] = [
     {
-        name: "Margherita",
-        description:
-            "sos de roșii, mozzarella fior di latte, parmesan, busuioc",
-        prices: [
+        name: MARGHERITA_NAME,
+        ingredients: MARGHERITA.join(", "),
+        description: null,
+        variants: [
             {
-                value: 7,
-                currency: "ron",
-                weight: {
-                    value: 120,
-                    unit: "gram",
-                },
-            },
+                price: { value: 7, currency: "ron" } as const,
+                weight: { value: 120, unit: "g" } as const,
+            } as const,
             {
-                value: 28,
-                currency: "ron",
-                weight: {
-                    value: 480,
-                    unit: "gram",
-                },
-            },
-        ],
+                price: { value: 28, currency: "ron" } as const,
+                weight: { value: 480, unit: "g" } as const,
+            } as const,
+        ] as const,
     } as const,
     {
-        name: "Prosciutto e Funghi",
-        description:
-            "sos de roșii, mozzarella fior di latte, ciuperci brune, prosciutto cotto, busuioc",
-        prices: [
+        name: PROSCIUTTO_E_FUNGHI_NAME,
+        ingredients: PROSCIUTTO_E_FUNGHI.join(", "),
+        description: null,
+        variants: [
             {
-                value: 8,
-                currency: "ron",
-                weight: {
-                    value: 130,
-                    unit: "gram",
-                },
-            },
+                price: { value: 8, currency: "ron" } as const,
+                weight: { value: 130, unit: "g" } as const,
+            } as const,
             {
-                value: 32,
-                currency: "ron",
-                weight: {
-                    value: 520,
-                    unit: "gram",
-                },
-            },
-        ],
+                price: { value: 32, currency: "ron" } as const,
+                weight: { value: 520, unit: "g" } as const,
+            } as const,
+        ] as const,
     } as const,
     {
-        name: "Diavola",
-        description:
-            "sos de roșii, mozzarella fior di latte, salam picant napoli, ardei iute",
-        prices: [
+        name: DIAVOLA_NAME,
+        ingredients: DIAVOLA.join(", "),
+        description: null,
+        variants: [
             {
-                value: 8,
-                currency: "ron",
-                weight: {
-                    value: 130,
-                    unit: "gram",
-                },
-            },
+                price: { value: 8, currency: "ron" } as const,
+                weight: { value: 130, unit: "g" } as const,
+            } as const,
             {
-                value: 32,
-                currency: "ron",
-                weight: {
-                    value: 520,
-                    unit: "gram",
-                },
-            },
-        ],
+                price: { value: 32, currency: "ron" } as const,
+                weight: { value: 520, unit: "g" } as const,
+            } as const,
+        ] as const,
     } as const,
     {
-        name: "Bambino",
-        description:
-            "sos de roșii, mozzarella fior di latte, prosciutto cotto, porumb, busuioc",
-        prices: [
+        name: BAMBINO_NAME,
+        ingredients: BAMBINO.join(", "),
+        description: null,
+        variants: [
             {
-                value: 8,
-                currency: "ron",
-                weight: {
-                    value: 130,
-                    unit: "gram",
-                },
-            },
+                price: { value: 8, currency: "ron" } as const,
+                weight: { value: 130, unit: "g" } as const,
+            } as const,
             {
-                value: 32,
-                currency: "ron",
-                weight: {
-                    value: 520,
-                    unit: "gram",
-                },
-            },
-        ],
+                price: { value: 32, currency: "ron" } as const,
+                weight: { value: 520, unit: "g" } as const,
+            } as const,
+        ] as const,
     } as const,
     {
-        name: "Carnivora",
-        description:
-            "sos de roșii, mozzarella fior di latte, prosciutto cotto, salam napoli, carnati, busuioc",
-        prices: [
+        name: CARNIVORA_NAME,
+        ingredients: CARNIVORA.join(", "),
+        description: null,
+        variants: [
             {
-                value: 8.5,
-                currency: "ron",
-                weight: {
-                    value: 130,
-                    unit: "gram",
-                },
-            },
+                price: { value: 8.5, currency: "ron" } as const,
+                weight: { value: 130, unit: "g" } as const,
+            } as const,
             {
-                value: 34,
-                currency: "ron",
-                weight: {
-                    value: 520,
-                    unit: "gram",
-                },
-            },
-        ],
+                price: { value: 34, currency: "ron" } as const,
+                weight: { value: 520, unit: "g" } as const,
+            } as const,
+        ] as const,
     } as const,
 ] as const;

@@ -2,7 +2,7 @@ import PaniniSVG from "../assets/icons/panini.svg";
 import PizzaSliceSVG from "../assets/icons/pizza-slice.svg";
 import PizzaWholeSVG from "../assets/icons/pizza-whole.svg";
 import SaucesSVG from "../assets/icons/sauces.svg";
-import { TMenu } from "../routes/menu/menu";
+import { TMenu } from "../types/menu";
 import { DIVERSE } from "./products/diverse";
 import { PIZZAS } from "./products/pizzas";
 import { SANDWICHES } from "./products/sandwiches";
