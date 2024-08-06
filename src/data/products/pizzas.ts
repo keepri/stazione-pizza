@@ -50,7 +50,7 @@ export const PIZZAS: TMenuCategory["products"] = [
     {
         name: "Diavola",
         description:
-            "sos de roșii, mozzarella fior di latte, salam picant napoli, ardei iute, busuioc",
+            "sos de roșii, mozzarella fior di latte, salam picant napoli, ardei iute",
         prices: [
             {
                 value: 8,
@@ -96,7 +96,7 @@ export const PIZZAS: TMenuCategory["products"] = [
     {
         name: "Carnivora",
         description:
-            "sos de roșii, mozzarella fior di latte, prosciutto cotto, salam picant napoli, carnati, busuioc",
+            "sos de roșii, mozzarella fior di latte, prosciutto cotto, salam napoli, carnati, busuioc",
         prices: [
             {
                 value: 8.5,
