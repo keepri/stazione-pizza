@@ -4,7 +4,7 @@ import { Path } from "../routes/utils";
 type TLinks = TNavLinkGroupProps["links"];
 
 export const LINKS: TLinks = [
-    { children: "Menu", href: Path.Menu } as const,
-    { children: "About", href: Path.About } as const,
+    { children: "Meniu", href: Path.Menu } as const,
+    { children: "Despre noi", href: Path.About } as const,
     { children: "Contact", href: Path.Contact } as const,
 ] as const;
