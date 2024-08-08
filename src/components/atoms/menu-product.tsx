@@ -7,7 +7,7 @@ import {
     MENU_DOUBLE_ICON_WIDTH,
     MENU_SINGLE_ICON_WIDTH,
 } from "../../utils/constants";
-import { isObject } from "../../utils/object";
+import { isObject } from "../../utils/objects";
 
 type TProps = TMenuProduct;
 
