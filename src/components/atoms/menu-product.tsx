@@ -8,6 +8,7 @@ import {
     MENU_SINGLE_ICON_WIDTH,
 } from "../../utils/constants";
 import { isObject } from "../../utils/objects";
+import { P } from "./paragraph";
 
 type TProps = TMenuProduct;
 
@@ -24,22 +25,22 @@ export function MenuProduct(props: TProps) {
     const hasVariants = props.variants.length > 1;
 
     return (
-        <li class="flex items-start justify-between gap-4 font-dm-sans text-stz-dark">
+        <li class="flex items-start justify-between gap-4 font-dm-sans text-stz-dark sm:items-center">
             <div class="max-w-[45ch]">
                 <h3 class="text-xl font-bold">{props.name}</h3>
                 <Show when={hasIngredients}>
-                    <p class="text-sm">{props.ingredients}</p>
+                    <P class="!text-sm">{props.ingredients}</P>
                 </Show>
                 <Show when={hasDescription}>
-                    <p class={clsx(hasIngredients && "mt-2")}>
+                    <P class={clsx(hasIngredients && "mt-2")}>
                         {props.description}
-                    </p>
+                    </P>
                 </Show>
             </div>
 
             <div
                 class={clsx(
-                    "flex items-center justify-end gap-2",
+                    "flex items-center justify-end",
                     hasVariants && "justify-around",
                     numberOfVariants === 2
                         ? `w-${MENU_DOUBLE_ICON_WIDTH}`
@@ -60,12 +61,12 @@ function renderVariants(variant: Accessor<TProps["variants"][number]>) {
 
     return (
         <div class="w-20 text-center">
-            <p class="text-xl font-bold">{priceValue}</p>
+            <P class="font-bold sm:text-xl">{priceValue}</P>
             <Show when={isObject(weight)}>
-                <p class="text-sm">
+                <P class="!text-xs">
                     {weight!.value}
                     {UNIT[weight!.unit]}
-                </p>
+                </P>
             </Show>
         </div>
     );

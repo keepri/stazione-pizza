@@ -7,7 +7,7 @@ export function Motive(props: TProps) {
     return (
         <li>
             <H4 class="mb-2">{props.title}</H4>
-            <P class="sm:text-lg">{props.description}</P>
+            <P>{props.description}</P>
         </li>
     );
 }

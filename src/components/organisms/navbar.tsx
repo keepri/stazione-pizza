@@ -17,7 +17,7 @@ export function Navbar() {
                         href={Path.Home}
                         LogoProps={{ class: "bg-stz-background" }}
                     >
-                        <h1 class="font-poppins text-lg font-bold text-stz-dark max-sm:hidden">
+                        <h1 class="font-poppins text-lg font-semibold text-stz-dark max-sm:hidden">
                             Stazione Pizza
                         </h1>
                     </LogoLink>

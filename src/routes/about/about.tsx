@@ -8,7 +8,7 @@ export function About() {
     return (
         <>
             <PageTitle>Despre noi</PageTitle>
-            <Section class="flex gap-24 max-lg:flex-wrap max-sm:gap-16 max-sm:pb-24 sm:pb-32">
+            <Section class="flex gap-16 max-lg:flex-wrap max-sm:pb-24 sm:gap-24 sm:pb-32">
                 <AboutImage />
                 <AboutInfo />
             </Section>
@@ -21,7 +21,7 @@ function AboutInfo() {
         <div class="order-2 max-lg:order-1">
             <div class="mb-16">
                 <H4 class="mb-4">Cine suntem</H4>
-                <P class="max-w-[55ch]">
+                <P>
                     Stazione Pizza este un business local din Cluj, fondat în
                     iulie 2024 de Csabi și Attila, doi prieteni pasionați de
                     arta culinară. Visul lor de a aduce un colț de Italia în
@@ -31,7 +31,7 @@ function AboutInfo() {
             </div>
             <div>
                 <H4 class="mb-4">Viziunea Noastră</H4>
-                <P class="max-w-[55ch]">
+                <P>
                     Ne dorim să fim locul preferat al clujenilor pentru a savura
                     pizza autentică napoletană. Vino să ne vizitezi și descoperă
                     povestea noastră prin fiecare felie delicioasă!
@@ -43,7 +43,7 @@ function AboutInfo() {
 
 function AboutImage() {
     return (
-        <span class="order-1 max-lg:order-2 max-lg:mx-auto">
+        <span class="order-2 max-lg:mx-auto lg:order-1">
             <img
                 width={275}
                 class="max-w-full rounded-2xl"

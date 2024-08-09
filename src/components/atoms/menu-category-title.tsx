@@ -22,11 +22,13 @@ export function MenuCategoryTitle(props: TProps) {
 
     return (
         <div class={clsx(props.class, "flex items-center justify-between")}>
-            <h2 class="font-dolmen text-3xl text-stz-primary">{resolved()}</h2>
+            <h2 class="font-dolmen text-3xl text-stz-primary sm:text-4xl">
+                {resolved()}
+            </h2>
             <Show when={Boolean(numberOfIcons)}>
                 <div
                     class={clsx(
-                        "flex items-center justify-end gap-2",
+                        "flex items-center justify-end",
                         numberOfIcons > 1 && "justify-around",
                         numberOfIcons === 2
                             ? `w-${MENU_DOUBLE_ICON_WIDTH}`

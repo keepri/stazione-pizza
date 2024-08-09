@@ -12,7 +12,7 @@ export function Contact() {
     return (
         <>
             <PageTitle>Contact</PageTitle>
-            <Section class="justify-between gap-4 max-sm:pb-24 sm:pb-32 lg:flex">
+            <Section class="max-sm:pb-24 sm:pb-32 lg:flex lg:justify-between lg:gap-4">
                 <ContactInfo />
                 <LocationMap />
             </Section>

@@ -11,7 +11,7 @@ export function H4(props: TProps) {
         <h4
             class={clsx(
                 local.class,
-                "text-3xl font-extrabold text-stz-primary",
+                "text-2xl font-extrabold text-stz-primary sm:text-4xl",
             )}
             {...others}
         >

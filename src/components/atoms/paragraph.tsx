@@ -10,7 +10,10 @@ export function P(props: TProps) {
 
     return (
         <p
-            class={clsx(local.class, "max-w-prose font-dm-sans text-stz-dark")}
+            class={clsx(
+                local.class,
+                "max-w-[55ch] font-dm-sans text-stz-dark sm:text-lg",
+            )}
             {...others}
         >
             {resolved()}

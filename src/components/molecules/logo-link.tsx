@@ -15,7 +15,7 @@ export function LogoLink(props: TProps) {
     return (
         <Link
             href={props.href}
-            class="flex flex-wrap items-center justify-between gap-5"
+            class="flex flex-wrap items-center justify-between gap-3"
         >
             <Logo size={props.size} {...props.LogoProps} />
             {resolved()}
