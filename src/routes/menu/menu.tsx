@@ -1,6 +1,7 @@
-import { Accessor, Index } from "solid-js";
+import { Accessor, Index, Show } from "solid-js";
 
 import { PageTitle } from "../../components/atoms/page-title";
+import { P } from "../../components/atoms/paragraph";
 import { Section } from "../../components/atoms/section";
 import { MenuCategory } from "../../components/molecules/menu-category";
 import { CATEGORIES } from "../../data/categories";
@@ -32,6 +33,9 @@ function renderCategories(
                 products={products}
                 icons={icons}
             />
+            <Show when={isLast}>
+                <P class="opacity-50 mt-10">Toate prețurile sunt în RON.</P>
+            </Show>
         </Section>
     );
 }

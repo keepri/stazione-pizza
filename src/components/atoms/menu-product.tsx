@@ -40,7 +40,7 @@ export function MenuProduct(props: TProps) {
 
             <div
                 class={clsx(
-                    "flex items-center justify-end",
+                    "flex items-center justify-end gap-4",
                     hasVariants && "justify-around",
                     numberOfVariants === 2
                         ? `w-${MENU_DOUBLE_ICON_WIDTH}`
