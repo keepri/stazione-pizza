@@ -12,7 +12,7 @@ const NUMBER_OF_CATEGORIES = CATEGORIES.length;
 export function Menu() {
     return (
         <>
-            <PageTitle side="right">Menu</PageTitle>
+            <PageTitle side="right">Meniu</PageTitle>
             <Index each={CATEGORIES} children={renderCategories} />
         </>
     );
@@ -34,7 +34,7 @@ function renderCategories(
                 icons={icons}
             />
             <Show when={isLast}>
-                <P class="opacity-50 mt-10">Toate prețurile sunt în RON.</P>
+                <P class="mt-10 opacity-50">Toate prețurile sunt în RON.</P>
             </Show>
         </Section>
     );
