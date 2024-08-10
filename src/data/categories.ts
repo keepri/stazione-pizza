@@ -16,7 +16,7 @@ export const CATEGORIES: TMenu["categories"] = [
     } as const,
     {
         slug: "panuozzo",
-        title: "SANDWICH NAPOLITAN PANUOZZO",
+        title: "SANDWICH NAPOLETAN PANUOZZO",
         icons: [PaniniSVG] as const,
         products: SANDWICHES,
     } as const,
