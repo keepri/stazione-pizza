@@ -27,6 +27,7 @@ export function Footer() {
                 <LogoLink
                     href={Path.Home}
                     size="xl"
+                    class="max-lg:mx-auto"
                     LogoProps={{ class: "bg-stz-primary" }}
                 />
             </main>
