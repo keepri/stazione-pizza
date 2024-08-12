@@ -34,11 +34,11 @@ function renderIcon(props: TProps) {
     if (props.icon) {
         switch (typeof props.icon) {
             case "string":
-                Icon = <img width={24} height={24} src={props.icon} />;
+                Icon = <img width={20} height={20} src={props.icon} />;
                 break;
 
             case "function":
-                Icon = <props.icon width={24} height={24} fill="white" />;
+                Icon = <props.icon width={20} height={20} fill="white" />;
                 break;
         }
     }

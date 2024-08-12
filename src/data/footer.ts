@@ -1,8 +1,8 @@
 import FacebookSvg from "../assets/icons/socials/facebook.svg";
 import InstagramSvg from "../assets/icons/socials/instagram.svg";
-import PhoneSvg from "../assets/icons/socials/phone.svg";
 import { TProps as TFooterLinkGroupProps } from "../components/molecules/footer-link-group";
 import { Path } from "../routes/utils";
+import { FACEBOOK_LINK, INSTAGRAM_LINK } from "./company-info";
 
 type TLinks = TFooterLinkGroupProps["links"];
 
@@ -15,20 +15,15 @@ export const NAV_LINKS: TLinks = [
 
 export const SOCIAL_LINKS: TLinks = [
     {
-        href: "https://www.instagram.com/stazionepizzacluj",
+        href: INSTAGRAM_LINK,
         newTab: true,
         children: "Instagram",
         icon: InstagramSvg,
     } as const,
     {
-        href: "https://www.facebook.com/profile.php?id=61560835116628",
+        href: FACEBOOK_LINK,
         newTab: true,
         children: "Facebook",
         icon: FacebookSvg,
-    } as const,
-    {
-        href: "tel:+40770133695",
-        children: "+40 770 133 695",
-        icon: PhoneSvg,
     } as const,
 ] as const;

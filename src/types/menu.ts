@@ -11,7 +11,7 @@ export type TMenuCategory = Readonly<{
     title: string;
     products: ReadonlyArray<TMenuProduct>;
     icons: ReadonlyArray<
-        string | Component<JSX.SvgSVGAttributes<SVGSVGElement>>
+
     > | null;
 }>;
 
