@@ -1,3 +1,6 @@
+import FacebookSvg from "../assets/icons/socials/facebook.svg";
+import InstagramSvg from "../assets/icons/socials/instagram.svg";
+import PhoneSvg from "../assets/icons/socials/phone.svg";
 import { TProps as TFooterLinkGroupProps } from "../components/molecules/footer-link-group";
 import { Path } from "../routes/utils";
 
@@ -10,10 +13,22 @@ export const NAV_LINKS: TLinks = [
     { children: "Contact", href: Path.Contact } as const,
 ] as const;
 
-// export const LEGAL_LINKS: TFooterLinkGroupProps["links"] = [
-//     { children: "Privacy Policy", href: Path.PrivacyPolicy } as const,
-//     {
-//         children: "Terms and Conditions",
-//         href: Path.TermsAndConditions,
-//     } as const,
-// ] as const;
+export const SOCIAL_LINKS: TLinks = [
+    {
+        href: "https://www.instagram.com/stazionepizzacluj",
+        newTab: true,
+        children: "Instagram",
+        icon: InstagramSvg,
+    } as const,
+    {
+        href: "https://www.facebook.com/profile.php?id=61560835116628",
+        newTab: true,
+        children: "Facebook",
+        icon: FacebookSvg,
+    } as const,
+    {
+        href: "tel:+40770133695",
+        children: "+40 770 133 695",
+        icon: PhoneSvg,
+    } as const,
+] as const;

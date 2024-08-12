@@ -2,12 +2,11 @@ import { clsx } from "clsx";
 import { splitProps } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
 
-// TODO make this into a svg component
-import logoUrl from "../../assets/logo.svg?url";
+import LogoSvg from "../../assets/logo.svg";
 
 type TSize = "lg" | "xl";
 
-export type TProps = JSX.HTMLAttributes<HTMLImageElement> & {
+export type TProps = JSX.SvgSVGAttributes<SVGSVGElement> & {
     size?: TSize;
 };
 
@@ -22,10 +21,10 @@ export function Logo(props: TProps) {
     const size = local.size ?? "lg";
 
     return (
-        <img
+        <LogoSvg
+            width={200}
+            height={200}
             class={clsx(local.class, sizes[size], "rounded-full")}
-            src={logoUrl}
-            alt="Stazione logo"
             {...others}
         />
     );
