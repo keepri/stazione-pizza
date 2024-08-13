@@ -17,7 +17,7 @@ export function HeroSection() {
                     autentice și multă pasiune, pentru a-ți oferi o experiență
                     culinară de neuitat.
                 </P>
-                <ButtonLink class="px-12 py-4" href={Path.Menu}>
+                <ButtonLink class="px-7 py-3" href={Path.Menu}>
                     DESCOPERĂ MENIUL
                 </ButtonLink>
             </div>
