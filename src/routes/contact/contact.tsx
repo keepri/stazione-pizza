@@ -34,8 +34,8 @@ function ContactInfo() {
             <div>
                 <H4 class="mb-4 whitespace-nowrap">Contactează-ne</H4>
                 <CallUs class="mb-1" />
-                <SocialLink class="mb-1" type="instagram" />
-                <SocialLink type="facebook" />
+                <SocialLink class="mb-1" variant="instagram" />
+                <SocialLink variant="facebook" />
             </div>
             <div>
                 <H4 class="mb-4 whitespace-nowrap">Locație</H4>

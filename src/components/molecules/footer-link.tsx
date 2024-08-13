@@ -1,6 +1,7 @@
 import { AnchorProps } from "@solidjs/router";
 import { Component, JSX, ParentProps } from "solid-js";
 
+import { DEFAULT_ICON_SIZE } from "../../utils/constants";
 import { Link } from "../atoms/link";
 
 export type TProps = ParentProps & {
@@ -34,11 +35,23 @@ function renderIcon(props: TProps) {
     if (props.icon) {
         switch (typeof props.icon) {
             case "string":
-                Icon = <img width={20} height={20} src={props.icon} />;
+                Icon = (
+                    <img
+                        width={DEFAULT_ICON_SIZE}
+                        height={DEFAULT_ICON_SIZE}
+                        src={props.icon}
+                    />
+                );
                 break;
 
             case "function":
-                Icon = <props.icon width={20} height={20} fill="white" />;
+                Icon = (
+                    <props.icon
+                        width={DEFAULT_ICON_SIZE}
+                        height={DEFAULT_ICON_SIZE}
+                        fill="white"
+                    />
+                );
                 break;
         }
     }
