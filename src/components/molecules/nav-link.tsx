@@ -13,7 +13,7 @@ export function NavLink(props: TProps) {
             <Link
                 showActive
                 href={props.href}
-                class="whitespace-nowrap py-2 text-lg text-stz-dark hover:underline"
+                class="whitespace-nowrap p-2 text-lg text-stz-dark hover:underline"
             >
                 {props.children}
             </Link>
