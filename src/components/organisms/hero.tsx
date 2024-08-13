@@ -11,13 +11,15 @@ export function HeroSection() {
                 <h1 class="mb-4 font-poppins text-5xl font-extrabold leading-tight text-stz-dark sm:mb-8 sm:text-6xl xl:text-8xl">
                     Pizza <span class="text-stz-primary">Napoletană</span>
                 </h1>
-                <P class="mb-8 leading-relaxed sm:mb-16 sm:text-xl">
+                <P class="mb-12 leading-relaxed sm:mb-16 sm:text-xl">
                     Descoperă adevărata pizza napoletană chiar în inima
                     Clujului! Fiecare pizza este pregătită cu ingrediente
                     autentice și multă pasiune, pentru a-ți oferi o experiență
                     culinară de neuitat.
                 </P>
-                <ButtonLink href={Path.Menu}>DESCOPERĂ MENIUL</ButtonLink>
+                <ButtonLink class="px-12 py-4" href={Path.Menu}>
+                    DESCOPERĂ MENIUL
+                </ButtonLink>
             </div>
             <img
                 width={550}
