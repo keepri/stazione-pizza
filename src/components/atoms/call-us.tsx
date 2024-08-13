@@ -1,18 +1,6 @@
 import { clsx } from "clsx";
 
 import PhoneSvg from "../../assets/icons/socials/phone.svg";
-// {
-//     href: `tel:${TELEPHONE_NUMBER}`,
-//     children: (() => {
-//         let number = "";
-//         for (let i = 0; i < TELEPHONE_NUMBER.length; ++i) {
-//             number += TELEPHONE_NUMBER[i];
-//             if (!(i % 3)) number += " ";
-//         }
-//         return number;
-//     })(),
-//     icon: PhoneSvg,
-// } as const,
 import { PHONE_NUMBER } from "../../data/company-info";
 import { STZ_DARK } from "../../utils/constants";
 
