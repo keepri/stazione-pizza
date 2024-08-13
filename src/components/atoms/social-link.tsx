@@ -3,7 +3,7 @@ import { clsx } from "clsx";
 import FacebookSvg from "../../assets/icons/socials/facebook.svg";
 import InstagramSvg from "../../assets/icons/socials/instagram.svg";
 import { FACEBOOK_LINK, INSTAGRAM_LINK } from "../../data/company-info";
-import { DEFAULT_ICON_SIZE } from "../../utils/constants";
+import { DEFAULT_ICON_SIZE, STZ_DARK } from "../../utils/constants";
 import { Link } from "./link";
 
 export type TSocialLink = "instagram" | "facebook";
@@ -25,7 +25,7 @@ export function SocialLink(props: TProps) {
                     <InstagramSvg
                         width={DEFAULT_ICON_SIZE}
                         height={DEFAULT_ICON_SIZE}
-                        fill="#401211"
+                        fill={STZ_DARK}
                     />
                     Instagram
                 </Link>
@@ -37,7 +37,7 @@ export function SocialLink(props: TProps) {
                     <FacebookSvg
                         width={DEFAULT_ICON_SIZE}
                         height={DEFAULT_ICON_SIZE}
-                        fill="#401211"
+                        fill={STZ_DARK}
                     />
                     Facebook
                 </Link>

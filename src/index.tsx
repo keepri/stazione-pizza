@@ -1,7 +1,9 @@
+import { Meta, MetaProvider, Title } from "@solidjs/meta";
 import { render } from "solid-js/web";
 
 import { App } from "./app";
 import "./index.css";
+import { STZ_BACKGROUND } from "./utils/constants";
 
 const root = document.getElementById("root");
 
@@ -12,5 +14,11 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 }
 
 render(function renderApp() {
-    return <App />;
+    return (
+        <MetaProvider>
+            <Title>Stazione Pizza</Title>
+            <Meta name="theme-color" content={STZ_BACKGROUND} />
+            <App />
+        </MetaProvider>
+    );
 }, root!);

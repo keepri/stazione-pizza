@@ -1,5 +1,12 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 
+import {
+    STZ_BACKGROUND,
+    STZ_DARK,
+    STZ_LIGHT,
+    STZ_PRIMARY,
+} from "./src/utils/constants";
+
 /** @type {import("tailwindcss").Config} */
 export default {
     content: ["index.html", "./src/**/*.{html,js,jsx,ts,tsx}"],
@@ -26,10 +33,10 @@ export default {
             return {
                 ...colors,
                 stz: {
-                    background: "#F6EAD8",
-                    primary: "#CD5140",
-                    dark: "#401211",
-                    light: "#FFFFFF",
+                    background: STZ_BACKGROUND,
+                    primary: STZ_PRIMARY,
+                    dark: STZ_DARK,
+                    light: STZ_LIGHT,
                 },
             };
         },

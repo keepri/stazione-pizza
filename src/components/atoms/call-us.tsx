@@ -14,6 +14,7 @@ import PhoneSvg from "../../assets/icons/socials/phone.svg";
 //     icon: PhoneSvg,
 // } as const,
 import { PHONE_NUMBER } from "../../data/company-info";
+import { STZ_DARK } from "../../utils/constants";
 
 type TProps = {
     class?: string;
@@ -34,7 +35,7 @@ export function CallUs(props: TProps) {
             href={"tel:" + PHONE_NUMBER}
         >
             {/* TODO extract fill color into constant (STZ_DARK) */}
-            <PhoneSvg fill="#401211" width={size} height={size} />
+            <PhoneSvg fill={STZ_DARK} width={size} height={size} />
             {phoneNumber}
         </a>
     );
