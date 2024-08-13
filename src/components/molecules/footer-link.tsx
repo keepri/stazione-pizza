@@ -1,7 +1,7 @@
 import { AnchorProps } from "@solidjs/router";
 import { Component, JSX, ParentProps } from "solid-js";
 
-import { DEFAULT_ICON_SIZE } from "../../utils/constants";
+import { DEFAULT_ICON_SIZE, STZ_LIGHT } from "../../utils/constants";
 import { Link } from "../atoms/link";
 
 export type TProps = ParentProps & {
@@ -49,7 +49,7 @@ function renderIcon(props: TProps) {
                     <props.icon
                         width={DEFAULT_ICON_SIZE}
                         height={DEFAULT_ICON_SIZE}
-                        fill="white"
+                        fill={STZ_LIGHT}
                     />
                 );
                 break;

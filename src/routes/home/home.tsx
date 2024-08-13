@@ -1,5 +1,5 @@
-import { HeroSection } from "../../components/organisms/hero-section";
-import { WhyUsSection } from "../../components/organisms/why-us-section";
+import { HeroSection } from "../../components/organisms/hero";
+import { WhyUsSection } from "../../components/organisms/why-us";
 
 export function Home() {
     return (

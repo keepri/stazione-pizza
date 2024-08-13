@@ -8,6 +8,8 @@ import {
     MENU_SINGLE_ICON_WIDTH,
 } from "../../utils/constants";
 
+const ICON_SIZE = 60;
+
 type TProps = {
     children: TMenuCategory["title"];
     icons: TMenuCategory["icons"];
@@ -43,20 +45,24 @@ export function MenuCategoryTitle(props: TProps) {
 }
 
 function renderIcons(icon: Accessor<TIcon>) {
-    const size = 60;
     const Icon = icon();
 
     if (typeof Icon === "string") {
         return (
             <div class="w-20">
-                <img class="mx-auto" width={size} height={size} src={Icon} />
+                <img
+                    class="mx-auto"
+                    width={ICON_SIZE}
+                    height={ICON_SIZE}
+                    src={Icon}
+                />
             </div>
         );
     }
 
     return (
         <div class="w-20">
-            <Icon class="mx-auto" width={size} height={size} />
+            <Icon class="mx-auto" width={ICON_SIZE} height={ICON_SIZE} />
         </div>
     );
 }
