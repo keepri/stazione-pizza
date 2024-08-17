@@ -1,12 +1,11 @@
 import { clsx } from "clsx";
-import { ParentProps, children, splitProps } from "solid-js";
+import { ParentProps, splitProps } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
 
 type TProps = ParentProps & JSX.HTMLAttributes<HTMLParagraphElement>;
 
 export function P(props: TProps) {
     const [local, others] = splitProps(props, ["children", "class"]);
-    const resolved = children(() => props.children);
 
     return (
         <p
@@ -16,7 +15,7 @@ export function P(props: TProps) {
             )}
             {...others}
         >
-            {resolved()}
+            {local.children}
         </p>
     );
 }

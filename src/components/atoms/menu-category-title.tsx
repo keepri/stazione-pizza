@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Accessor, Index, Show, children } from "solid-js";
+import { Accessor, Index, Show } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
 
 import { TMenuCategory } from "../../types/menu";
@@ -18,14 +18,12 @@ type TProps = {
 type TIcon = NonNullable<TProps["icons"]>[number];
 
 export function MenuCategoryTitle(props: TProps) {
-    const resolved = children(() => props.children);
-
     const numberOfIcons = props.icons?.length ?? 0;
 
     return (
         <div class={clsx(props.class, "flex items-center justify-between")}>
             <h2 class="font-dolmen text-3xl text-stz-primary sm:text-4xl">
-                {resolved()}
+                {props.children}
             </h2>
             <Show when={Boolean(numberOfIcons)}>
                 <div

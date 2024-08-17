@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { ParentProps, children } from "solid-js";
+import { ParentProps } from "solid-js";
 
 type TProps = ParentProps & {
     side?: "left" | "right";
@@ -7,8 +7,6 @@ type TProps = ParentProps & {
 
 export function PageTitle(props: TProps) {
     props.side ??= "left";
-
-    const resolved = children(() => props.children);
 
     const isLeft = props.side === "left";
     const isRight = props.side === "right";
@@ -22,7 +20,7 @@ export function PageTitle(props: TProps) {
                     isLeft && "order-1 pr-8 sm:pr-16",
                 )}
             >
-                {resolved()}
+                {props.children}
             </h1>
             <div
                 class={clsx(
