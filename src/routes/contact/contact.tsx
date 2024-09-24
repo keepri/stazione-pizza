@@ -28,7 +28,7 @@ function ContactInfo() {
             {/* TODO extract into component */}
             <div>
                 <H4 class="mb-4 whitespace-nowrap">Program</H4>
-                <P class="mb-1 font-bold">luni - vineri: 8-20</P>
+                <P class="mb-1 font-bold">luni - vineri: 10-22</P>
                 <P>sâmbătă - duminică: închis</P>
             </div>
             <div>
