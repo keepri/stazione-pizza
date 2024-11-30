@@ -8,7 +8,6 @@ export const DIVERSE: TMenuCategory["products"] = [
         ingredients: null,
         variants: [
             {
-                name: null,
                 price: { value: 4, currency: "ron" } as const,
                 weight: { value: 50, unit: "ml" } as const,
             } as const,
@@ -20,7 +19,6 @@ export const DIVERSE: TMenuCategory["products"] = [
         ingredients: SOS_ALB.join(", "),
         variants: [
             {
-                name: null,
                 price: { value: 4, currency: "ron" } as const,
                 weight: { value: 50, unit: "ml" } as const,
             } as const,
@@ -32,7 +30,6 @@ export const DIVERSE: TMenuCategory["products"] = [
         ingredients: null,
         variants: [
             {
-                name: null,
                 price: { value: 4, currency: "ron" } as const,
                 weight: { value: 50, unit: "ml" } as const,
             } as const,
@@ -44,7 +41,6 @@ export const DIVERSE: TMenuCategory["products"] = [
         ingredients: null,
         variants: [
             {
-                name: null,
                 price: { value: 2, currency: "ron" } as const,
                 weight: null,
             } as const,

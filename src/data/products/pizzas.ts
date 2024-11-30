@@ -1,19 +1,44 @@
 import { TMenuCategory } from "../../types/menu";
 import {
     BAMBINO,
+    CAPRICCIOSA,
     CARNIVORA,
     DIAVOLA,
+    HAWAII,
     MARGHERITA,
+    MARINARA,
     PROSCIUTTO_E_FUNGHI,
+    QUATRO_FORMAGGI,
+    TONNO_E_CIPOLLA,
 } from "./recipes";
 
+const MARINARA_NAME = "Marinara (post)";
 const MARGHERITA_NAME = "Margherita";
 const PROSCIUTTO_E_FUNGHI_NAME = "Prosciutto e Funghi";
-const DIAVOLA_NAME = "Diavola";
 const BAMBINO_NAME = "Bambino";
+const DIAVOLA_NAME = "Diavola";
 const CARNIVORA_NAME = "Carnivora";
+const HAWAII_NAME = "Hawaii";
+const TONNO_E_CIPOLLA_NAME = "Tonno e Cipolla";
+const CAPRICCIOSA_NAME = "Capricciosa";
+const QUATRO_FORMAGGI_NAME = "Quatro Formaggi";
 
 export const PIZZAS: TMenuCategory["products"] = [
+    {
+        name: MARINARA_NAME,
+        ingredients: MARINARA.join(", "),
+        description: null,
+        variants: [
+            {
+                price: { value: 7, currency: "ron" } as const,
+                weight: { value: 100, unit: "g" } as const,
+            } as const,
+            {
+                price: { value: 28, currency: "ron" } as const,
+                weight: { value: 400, unit: "g" } as const,
+            } as const,
+        ] as const,
+    } as const,
     {
         name: MARGHERITA_NAME,
         ingredients: MARGHERITA.join(", "),
@@ -45,8 +70,8 @@ export const PIZZAS: TMenuCategory["products"] = [
         ] as const,
     } as const,
     {
-        name: DIAVOLA_NAME,
-        ingredients: DIAVOLA.join(", "),
+        name: BAMBINO_NAME,
+        ingredients: BAMBINO.join(", "),
         description: null,
         variants: [
             {
@@ -60,8 +85,8 @@ export const PIZZAS: TMenuCategory["products"] = [
         ] as const,
     } as const,
     {
-        name: BAMBINO_NAME,
-        ingredients: BAMBINO.join(", "),
+        name: DIAVOLA_NAME,
+        ingredients: DIAVOLA.join(", "),
         description: null,
         variants: [
             {
@@ -85,6 +110,66 @@ export const PIZZAS: TMenuCategory["products"] = [
             } as const,
             {
                 price: { value: 34, currency: "ron" } as const,
+                weight: { value: 520, unit: "g" } as const,
+            } as const,
+        ] as const,
+    } as const,
+    {
+        name: HAWAII_NAME,
+        ingredients: HAWAII.join(", "),
+        description: null,
+        variants: [
+            {
+                price: { value: 9, currency: "ron" } as const,
+                weight: { value: 130, unit: "g" } as const,
+            } as const,
+            {
+                price: { value: 36, currency: "ron" } as const,
+                weight: { value: 520, unit: "g" } as const,
+            } as const,
+        ] as const,
+    } as const,
+    {
+        name: TONNO_E_CIPOLLA_NAME,
+        ingredients: TONNO_E_CIPOLLA.join(", "),
+        description: null,
+        variants: [
+            {
+                price: { value: 9, currency: "ron" } as const,
+                weight: { value: 130, unit: "g" } as const,
+            } as const,
+            {
+                price: { value: 36, currency: "ron" } as const,
+                weight: { value: 520, unit: "g" } as const,
+            } as const,
+        ] as const,
+    } as const,
+    {
+        name: CAPRICCIOSA_NAME,
+        ingredients: CAPRICCIOSA.join(", "),
+        description: null,
+        variants: [
+            {
+                price: { value: 10, currency: "ron" } as const,
+                weight: { value: 140, unit: "g" } as const,
+            } as const,
+            {
+                price: { value: 40, currency: "ron" } as const,
+                weight: { value: 560, unit: "g" } as const,
+            } as const,
+        ] as const,
+    } as const,
+    {
+        name: QUATRO_FORMAGGI_NAME,
+        ingredients: QUATRO_FORMAGGI.join(", "),
+        description: null,
+        variants: [
+            {
+                price: { value: 10, currency: "ron" } as const,
+                weight: { value: 130, unit: "g" } as const,
+            } as const,
+            {
+                price: { value: 36, currency: "ron" } as const,
                 weight: { value: 520, unit: "g" } as const,
             } as const,
         ] as const,
