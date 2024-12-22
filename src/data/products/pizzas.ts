@@ -21,7 +21,7 @@ const CARNIVORA_NAME = "Carnivora";
 const HAWAII_NAME = "Hawaii";
 const TONNO_E_CIPOLLA_NAME = "Tonno e Cipolla";
 const CAPRICCIOSA_NAME = "Capricciosa";
-const QUATRO_FORMAGGI_NAME = "Quatro Formaggi";
+const QUATRO_FORMAGGI_NAME = "Quattro Formaggi";
 
 export const PIZZAS: TMenuCategory["products"] = [
     {
@@ -45,11 +45,11 @@ export const PIZZAS: TMenuCategory["products"] = [
         description: null,
         variants: [
             {
-                price: { value: 7, currency: "ron" } as const,
+                price: { value: 8, currency: "ron" } as const,
                 weight: { value: 120, unit: "g" } as const,
             } as const,
             {
-                price: { value: 28, currency: "ron" } as const,
+                price: { value: 32, currency: "ron" } as const,
                 weight: { value: 480, unit: "g" } as const,
             } as const,
         ] as const,
@@ -60,11 +60,11 @@ export const PIZZAS: TMenuCategory["products"] = [
         description: null,
         variants: [
             {
-                price: { value: 8, currency: "ron" } as const,
+                price: { value: 9, currency: "ron" } as const,
                 weight: { value: 130, unit: "g" } as const,
             } as const,
             {
-                price: { value: 32, currency: "ron" } as const,
+                price: { value: 36, currency: "ron" } as const,
                 weight: { value: 520, unit: "g" } as const,
             } as const,
         ] as const,
@@ -75,11 +75,11 @@ export const PIZZAS: TMenuCategory["products"] = [
         description: null,
         variants: [
             {
-                price: { value: 8, currency: "ron" } as const,
+                price: { value: 9, currency: "ron" } as const,
                 weight: { value: 130, unit: "g" } as const,
             } as const,
             {
-                price: { value: 32, currency: "ron" } as const,
+                price: { value: 36, currency: "ron" } as const,
                 weight: { value: 520, unit: "g" } as const,
             } as const,
         ] as const,
@@ -90,11 +90,11 @@ export const PIZZAS: TMenuCategory["products"] = [
         description: null,
         variants: [
             {
-                price: { value: 8, currency: "ron" } as const,
+                price: { value: 9, currency: "ron" } as const,
                 weight: { value: 130, unit: "g" } as const,
             } as const,
             {
-                price: { value: 32, currency: "ron" } as const,
+                price: { value: 36, currency: "ron" } as const,
                 weight: { value: 520, unit: "g" } as const,
             } as const,
         ] as const,
@@ -105,11 +105,11 @@ export const PIZZAS: TMenuCategory["products"] = [
         description: null,
         variants: [
             {
-                price: { value: 8.5, currency: "ron" } as const,
+                price: { value: 10, currency: "ron" } as const,
                 weight: { value: 130, unit: "g" } as const,
             } as const,
             {
-                price: { value: 34, currency: "ron" } as const,
+                price: { value: 40, currency: "ron" } as const,
                 weight: { value: 520, unit: "g" } as const,
             } as const,
         ] as const,
@@ -165,7 +165,7 @@ export const PIZZAS: TMenuCategory["products"] = [
         description: null,
         variants: [
             {
-                price: { value: 10, currency: "ron" } as const,
+                price: { value: 9, currency: "ron" } as const,
                 weight: { value: 130, unit: "g" } as const,
             } as const,
             {
