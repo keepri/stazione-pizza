@@ -1,7 +1,10 @@
 export const SOS_ROSII = "sos de roșii";
 export const MOZZARELLA = "mozzarella fior di latte";
 export const PARMESAN = "parmesan";
+export const GORGONZOLA = "gorgonzola";
+export const BRIE = "brie";
 export const BUSUIOC = "busuioc";
+export const OREGANO = "oregano";
 export const CIUPERCI_BRUNE = "ciuperci brune";
 export const PROSCIUTTO_COTTO = "prosciutto cotto";
 export const ARDEI_IUTE = "ardei iute";
@@ -13,4 +16,15 @@ export const IAURT = "iaurt";
 export const MAIONEZA = "maioneză";
 export const USTUROI = "usturoi";
 export const ROSII = "roșii";
+export const ROSII_USCATE = "roșii uscate";
+export const ANGHINARE = "anghinare";
 export const ULEI_MASLINE = "ulei de măsline";
+export const CREMA_BRANZA = "cremă de brânză";
+export const RUCOLA = "rucola";
+export const PESTO = "pesto";
+export const CEAPA_ROSIE = "ceapă roșie";
+export const CEAPA_ROSIE_MURATA = "ceapă roșie murată";
+export const TON = "ton";
+export const MASLINE = "măsline";
+
+export const ANANAS___ = "ananas";
