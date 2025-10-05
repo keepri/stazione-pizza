@@ -1,31 +1,31 @@
 import { TMenuCategory } from "../../types/menu";
 import {
-    PROSCIUTTO_FOCACCIA,
-    SALAMI_FOCACCIA,
-    VEGETARIAN_FOCACCIA,
+    CAPRESE_PANUOZZO,
+    PROSCIUTTO_PANUOZZO,
+    SALAMI_PANUOZZO,
 } from "./recipes";
 
-const FOCACCIA_SIMPLA = "Focaccia simplă";
-const PROSCIUTTO_FOCACCIA_NAME = "Prosciutto Focaccia";
-const SALAMI_FOCACCIA_NAME = "Salami Focaccia";
-const VEGETARIAN_FOCACCIA_NAME = "Vegetarian Focaccia";
+const PAINE_NAPOLETANA_NAME = "Pâinică napoletană";
+const PROSCIUTTO_PANUOZZO_NAME = "Prosciutto Panuozzo";
+const SALAMI_PANUOZZO_NAME = "Salami Panuozzo";
+const CAPRESE_PANUOZZO_NAME = "Caprese Panuozzo";
 
 export const SANDWICHES: TMenuCategory["products"] = [
     {
-        name: FOCACCIA_SIMPLA,
+        name: PAINE_NAPOLETANA_NAME,
         description: null,
         ingredients: null,
         variants: [
             {
-                price: { value: 12, currency: "ron" } as const,
-                weight: { value: 140, unit: "g" } as const,
+                price: { value: 10, currency: "ron" } as const,
+                weight: { value: 120, unit: "g" } as const,
             } as const,
         ] as const,
     } as const,
     {
-        name: PROSCIUTTO_FOCACCIA_NAME,
+        name: PROSCIUTTO_PANUOZZO_NAME,
         description: null,
-        ingredients: PROSCIUTTO_FOCACCIA.join(", "),
+        ingredients: PROSCIUTTO_PANUOZZO.join(", "),
         variants: [
             {
                 price: { value: 23, currency: "ron" } as const,
@@ -34,9 +34,9 @@ export const SANDWICHES: TMenuCategory["products"] = [
         ] as const,
     } as const,
     {
-        name: SALAMI_FOCACCIA_NAME,
+        name: SALAMI_PANUOZZO_NAME,
         description: null,
-        ingredients: SALAMI_FOCACCIA.join(", "),
+        ingredients: SALAMI_PANUOZZO.join(", "),
         variants: [
             {
                 price: { value: 23, currency: "ron" } as const,
@@ -45,9 +45,9 @@ export const SANDWICHES: TMenuCategory["products"] = [
         ] as const,
     } as const,
     {
-        name: VEGETARIAN_FOCACCIA_NAME,
+        name: CAPRESE_PANUOZZO_NAME,
         description: null,
-        ingredients: VEGETARIAN_FOCACCIA.join(", "),
+        ingredients: CAPRESE_PANUOZZO.join(", "),
         variants: [
             {
                 price: { value: 21, currency: "ron" } as const,
@@ -55,27 +55,4 @@ export const SANDWICHES: TMenuCategory["products"] = [
             } as const,
         ] as const,
     } as const,
-    // RIP ✝
-    // {
-    //     name: "Prosciutto Panuozzo",
-    //     description: null,
-    //     ingredients: PANUOZZO_PROSCIUTTO.join(", "),
-    //     variants: [
-    //         {
-    //             price: { value: 21, currency: "ron" } as const,
-    //             weight: { value: 200, unit: "g" } as const,
-    //         } as const,
-    //     ] as const,
-    // } as const,
-    // {
-    //     name: "Caprese Panuozzo (vegetarian)",
-    //     description: null,
-    //     ingredients: PANUOZZO_CAPRESE.join(", "),
-    //     variants: [
-    //         {
-    //             price: { value: 19, currency: "ron" } as const,
-    //             weight: { value: 200, unit: "g" } as const,
-    //         } as const,
-    //     ] as const,
-    // } as const,
 ] as const;

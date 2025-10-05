@@ -7,22 +7,26 @@ import { DIVERSE } from "./products/diverse";
 import { PIZZAS } from "./products/pizzas";
 import { SANDWICHES } from "./products/sandwiches";
 
+const PIZZA_TITLE = "PIZZA";
+const SANDWICH_TITLE = "SANDWICH";
+const DIVERSE_TITLE = "DIVERSE";
+
 export const CATEGORIES: TMenu["categories"] = [
     {
         slug: "pizza",
-        title: "PIZZA",
+        title: PIZZA_TITLE,
         icons: [PizzaSliceSVG, PizzaWholeSVG] as const,
         products: PIZZAS,
     } as const,
     {
-        slug: "focaccia",
-        title: "SANDWICH FOCACCIA",
+        slug: "sandwich",
+        title: SANDWICH_TITLE,
         icons: [PaniniSVG] as const,
         products: SANDWICHES,
     } as const,
     {
         slug: "diverse",
-        title: "DIVERSE",
+        title: DIVERSE_TITLE,
         icons: [SaucesSVG] as const,
         products: DIVERSE,
     } as const,

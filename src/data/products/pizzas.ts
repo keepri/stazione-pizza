@@ -7,20 +7,24 @@ import {
     HAWAII,
     MARGHERITA,
     MARINARA,
+    PROSCIUTTO_COTTO_,
     PROSCIUTTO_E_FUNGHI,
     QUATRO_FORMAGGI,
+    SALAME_DOLCE,
     TONNO_E_CIPOLLA,
 } from "./recipes";
 
 const MARINARA_NAME = "Marinara (post)";
 const MARGHERITA_NAME = "Margherita";
+const PROSCIUTTO_COTTO_NAME = "Prosciutto cotto";
 const PROSCIUTTO_E_FUNGHI_NAME = "Prosciutto e Funghi";
 const BAMBINO_NAME = "Bambino";
+const SALAME_DOLCE_NAME = "Salame dolce";
 const DIAVOLA_NAME = "Diavola";
 const CARNIVORA_NAME = "Carnivora";
+const CAPRICCIOSA_NAME = "Capricciosa";
 const HAWAII_NAME = "Hawaii";
 const TONNO_E_CIPOLLA_NAME = "Tonno e Cipolla";
-const CAPRICCIOSA_NAME = "Capricciosa";
 const QUATRO_FORMAGGI_NAME = "Quattro Formaggi";
 
 export const PIZZAS: TMenuCategory["products"] = [
@@ -55,6 +59,21 @@ export const PIZZAS: TMenuCategory["products"] = [
         ] as const,
     } as const,
     {
+        name: PROSCIUTTO_COTTO_NAME,
+        ingredients: PROSCIUTTO_COTTO_.join(", "),
+        description: null,
+        variants: [
+            {
+                price: { value: 9, currency: "ron" } as const,
+                weight: { value: 130, unit: "g" } as const,
+            } as const,
+            {
+                price: { value: 36, currency: "ron" } as const,
+                weight: { value: 520, unit: "g" } as const,
+            } as const,
+        ] as const,
+    } as const,
+    {
         name: PROSCIUTTO_E_FUNGHI_NAME,
         ingredients: PROSCIUTTO_E_FUNGHI.join(", "),
         description: null,
@@ -72,6 +91,21 @@ export const PIZZAS: TMenuCategory["products"] = [
     {
         name: BAMBINO_NAME,
         ingredients: BAMBINO.join(", "),
+        description: null,
+        variants: [
+            {
+                price: { value: 9, currency: "ron" } as const,
+                weight: { value: 130, unit: "g" } as const,
+            } as const,
+            {
+                price: { value: 36, currency: "ron" } as const,
+                weight: { value: 520, unit: "g" } as const,
+            } as const,
+        ] as const,
+    } as const,
+    {
+        name: SALAME_DOLCE_NAME,
+        ingredients: SALAME_DOLCE.join(", "),
         description: null,
         variants: [
             {
@@ -115,6 +149,21 @@ export const PIZZAS: TMenuCategory["products"] = [
         ] as const,
     } as const,
     {
+        name: CAPRICCIOSA_NAME,
+        ingredients: CAPRICCIOSA.join(", "),
+        description: null,
+        variants: [
+            {
+                price: { value: 10, currency: "ron" } as const,
+                weight: { value: 140, unit: "g" } as const,
+            } as const,
+            {
+                price: { value: 40, currency: "ron" } as const,
+                weight: { value: 560, unit: "g" } as const,
+            } as const,
+        ] as const,
+    } as const,
+    {
         name: HAWAII_NAME,
         ingredients: HAWAII.join(", "),
         description: null,
@@ -141,21 +190,6 @@ export const PIZZAS: TMenuCategory["products"] = [
             {
                 price: { value: 36, currency: "ron" } as const,
                 weight: { value: 520, unit: "g" } as const,
-            } as const,
-        ] as const,
-    } as const,
-    {
-        name: CAPRICCIOSA_NAME,
-        ingredients: CAPRICCIOSA.join(", "),
-        description: null,
-        variants: [
-            {
-                price: { value: 10, currency: "ron" } as const,
-                weight: { value: 140, unit: "g" } as const,
-            } as const,
-            {
-                price: { value: 40, currency: "ron" } as const,
-                weight: { value: 560, unit: "g" } as const,
             } as const,
         ] as const,
     } as const,
