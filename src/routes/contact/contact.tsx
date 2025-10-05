@@ -29,7 +29,8 @@ function ContactInfo() {
             <div>
                 <H4 class="mb-4 whitespace-nowrap">Program</H4>
                 <P class="mb-1 font-bold">luni - vineri: 10-22</P>
-                <P>sâmbătă - duminică: închis</P>
+                <P class="mb-1 font-bold">sâmbătă: 14-22</P>
+                <P>duminică: închis</P>
             </div>
             <div>
                 <H4 class="mb-4 whitespace-nowrap">Contactează-ne</H4>
