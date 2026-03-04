@@ -4,7 +4,7 @@ export const MOTIVES: ReadonlyArray<TMotive> = [
     {
         title: "Ingrediente proaspete și autentice",
         description:
-            "Folosim doar cele mai bune ingrediente pentru a aduce aroma veritabilă a Italiei în fiecare felie.",
+            "Folosim ingrediente selecționate cu grijă pentru a reda gustul autentic al Italiei în fiecare felie.",
     } as const,
     {
         title: "Pizza napoletană autentică",
