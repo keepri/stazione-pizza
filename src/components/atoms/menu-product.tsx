@@ -3,10 +3,6 @@ import { Accessor, Index, Show } from "solid-js";
 
 import { TMenuProduct } from "../../types/menu";
 import { TWeightUnit } from "../../types/product";
-import {
-    MENU_DOUBLE_ICON_WIDTH,
-    MENU_SINGLE_ICON_WIDTH,
-} from "../../utils/constants";
 import { isObject } from "../../utils/objects";
 import { P } from "./paragraph";
 
@@ -18,11 +14,8 @@ const UNIT: Readonly<Record<TWeightUnit, string>> = {
 } as const;
 
 export function MenuProduct(props: TProps) {
-    const numberOfVariants = props.variants.length;
-
     const hasIngredients = Boolean(props.ingredients);
     const hasDescription = Boolean(props.description);
-    const hasVariants = props.variants.length > 1;
 
     return (
         <li class="flex items-start justify-between gap-4 font-dm-sans text-stz-dark sm:items-center">
@@ -38,15 +31,7 @@ export function MenuProduct(props: TProps) {
                 </Show>
             </div>
 
-            <div
-                class={clsx(
-                    "flex items-center justify-end gap-4",
-                    hasVariants && "justify-around",
-                    numberOfVariants === 2
-                        ? `w-${MENU_DOUBLE_ICON_WIDTH}`
-                        : `w-${MENU_SINGLE_ICON_WIDTH}`,
-                )}
-            >
+            <div class="flex items-center justify-end gap-4">
                 <Index each={props.variants} children={renderVariants} />
             </div>
         </li>
@@ -64,7 +49,7 @@ function renderVariants(variant: Accessor<TProps["variants"][number]>) {
             <P class="font-bold sm:text-xl">{priceValue}</P>
             <Show when={isObject(weight)}>
                 <P class="!text-xs">
-                    {weight!.value}
+                    {[weight!.value].flat().join("–")}
                     {UNIT[weight!.unit]}
                 </P>
             </Show>

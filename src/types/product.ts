@@ -16,7 +16,7 @@ export type TPrice = Readonly<{
 }>;
 
 export type TWeight = Readonly<{
-    value: number;
+    value: number | readonly [number, number];
     unit: TWeightUnit;
 }>;
 

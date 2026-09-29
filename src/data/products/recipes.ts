@@ -1,49 +1,64 @@
+// RIP ✝
+// import {
+//     CEAPA_ROSIE_MURATA,
+//     CREMA_BRANZA,
+//     ROSII_USCATE,
+//     SALAM_NAPOLI_DULCE_PICANT,
+// } from "./ingredients";
 import {
+    ALUAT_PIZZA,
     ANANAS___,
     ANGHINARE,
+    ARDEI_GRAS,
     ARDEI_IUTE,
     BRIE,
     BUSUIOC,
+    CABANOS,
     CARNATI,
     CEAPA_ROSIE,
-    CEAPA_ROSIE_MURATA,
+    CIUPERCI,
     CIUPERCI_BRUNE,
-    CREMA_BRANZA,
+    CRENVUSTI,
     GORGONZOLA,
     IAURT,
     MAIONEZA,
     MASLINE,
     MOZZARELLA,
+    MUSTAR,
     OREGANO,
     PARMEZAN,
+    PASTA_TRUFE,
+    PEPERONCINO,
     PESTO,
     PORUMB,
     PROSCIUTTO_COTTO,
+    PROSCIUTTO_CRUDO,
     ROSII,
-    ROSII_USCATE,
+    ROSII_CHERRY,
     RUCOLA,
     SALAM_DULCE,
     SALAM_NAPOLI,
-    SALAM_NAPOLI_DULCE_PICANT,
     SALAM_NAPOLI_PICANT,
+    SALSICCIA,
+    SMANTANA_GATIT,
     SOS_ROSII,
     TON,
+    ULEI_AROMATIZAT_USTUROI,
     ULEI_MASLINE,
     USTUROI,
+    ZUCCHINI,
 } from "./ingredients";
 
 // PIZZAS
 
 export const MARINARA = [SOS_ROSII, USTUROI, OREGANO, ULEI_MASLINE] as const;
 
-export const MARGHERITA = [SOS_ROSII, MOZZARELLA, PARMEZAN, BUSUIOC] as const;
-
-export const PROSCIUTTO_COTTO_ = [
+export const MARGHERITA = [
     SOS_ROSII,
     MOZZARELLA,
-    PROSCIUTTO_COTTO,
     PARMEZAN,
     BUSUIOC,
+    ULEI_MASLINE,
 ] as const;
 
 export const PROSCIUTTO_E_FUNGHI = [
@@ -53,6 +68,16 @@ export const PROSCIUTTO_E_FUNGHI = [
     PROSCIUTTO_COTTO,
     PARMEZAN,
     BUSUIOC,
+    ULEI_MASLINE,
+] as const;
+
+export const PROSCIUTTO_COTTO_ = [
+    SOS_ROSII,
+    MOZZARELLA,
+    PROSCIUTTO_COTTO,
+    PARMEZAN,
+    BUSUIOC,
+    ULEI_MASLINE,
 ] as const;
 
 export const BAMBINO = [
@@ -62,13 +87,7 @@ export const BAMBINO = [
     PORUMB,
     PARMEZAN,
     BUSUIOC,
-] as const;
-
-export const SALAME_DOLCE = [
-    SOS_ROSII,
-    MOZZARELLA,
-    SALAM_DULCE,
-    PARMEZAN,
+    ULEI_MASLINE,
 ] as const;
 
 export const DIAVOLA = [
@@ -77,6 +96,27 @@ export const DIAVOLA = [
     SALAM_NAPOLI_PICANT,
     PARMEZAN,
     ARDEI_IUTE,
+    ULEI_MASLINE,
+] as const;
+
+export const SALAME_DOLCE = [
+    SOS_ROSII,
+    MOZZARELLA,
+    SALAM_DULCE,
+    PARMEZAN,
+    ULEI_MASLINE,
+] as const;
+
+export const QUATTRO_STAGIONI = [
+    SOS_ROSII,
+    MOZZARELLA,
+    PROSCIUTTO_COTTO,
+    CIUPERCI,
+    ARDEI_GRAS,
+    MASLINE,
+    PORUMB,
+    PARMEZAN,
+    ULEI_MASLINE,
 ] as const;
 
 export const CARNIVORA = [
@@ -86,6 +126,7 @@ export const CARNIVORA = [
     SALAM_NAPOLI,
     CARNATI,
     PARMEZAN,
+    ULEI_MASLINE,
 ] as const;
 
 export const CAPRICCIOSA = [
@@ -97,6 +138,7 @@ export const CAPRICCIOSA = [
     MASLINE,
     PARMEZAN,
     BUSUIOC,
+    ULEI_MASLINE,
 ] as const;
 
 export const HAWAII = [
@@ -105,6 +147,7 @@ export const HAWAII = [
     PROSCIUTTO_COTTO,
     ANANAS___,
     PARMEZAN,
+    ULEI_MASLINE,
 ] as const;
 
 export const TONNO_E_CIPOLLA = [
@@ -113,6 +156,7 @@ export const TONNO_E_CIPOLLA = [
     TON,
     CEAPA_ROSIE,
     MASLINE,
+    ULEI_MASLINE,
 ] as const;
 
 export const QUATRO_FORMAGGI = [
@@ -121,28 +165,136 @@ export const QUATRO_FORMAGGI = [
     GORGONZOLA,
     BRIE,
     PARMEZAN,
+    ULEI_MASLINE,
+] as const;
+
+export const VERDURA = [
+    SOS_ROSII,
+    MOZZARELLA,
+    CIUPERCI,
+    ZUCCHINI,
+    PORUMB,
+    ARDEI_GRAS,
+    CEAPA_ROSIE,
+    MASLINE,
+    ULEI_MASLINE,
+] as const;
+
+export const VEGANA = [
+    SOS_ROSII,
+    CIUPERCI,
+    ZUCCHINI,
+    ANGHINARE,
+    PORUMB,
+    CEAPA_ROSIE,
+    MASLINE,
+    ULEI_MASLINE,
+] as const;
+
+// SPECIAL PIZZAS
+
+export const STAZIONE = [
+    SOS_ROSII,
+    MOZZARELLA,
+    SALSICCIA,
+    CIUPERCI,
+    ZUCCHINI,
+    CEAPA_ROSIE,
+    PARMEZAN,
+    ULEI_MASLINE,
+] as const;
+
+export const DIAVOLA_BLUE = [
+    SOS_ROSII,
+    MOZZARELLA,
+    SALAM_NAPOLI_PICANT,
+    GORGONZOLA,
+    PARMEZAN,
+    ARDEI_IUTE,
+    ULEI_MASLINE,
+] as const;
+
+export const CRUDO_E_RUCOLA = [
+    SOS_ROSII,
+    MOZZARELLA,
+    PROSCIUTTO_CRUDO,
+    ROSII_CHERRY,
+    RUCOLA,
+    PARMEZAN,
+    ULEI_MASLINE,
+] as const;
+
+export const SALSICCIA_AL_PESTO = [
+    MOZZARELLA,
+    PESTO,
+    SALSICCIA,
+    PARMEZAN,
+    ULEI_AROMATIZAT_USTUROI,
+] as const;
+
+export const CARCIOFI_AL_TARTUFO = [
+    MOZZARELLA,
+    SMANTANA_GATIT,
+    PASTA_TRUFE,
+    ANGHINARE,
+    CIUPERCI_BRUNE,
+    PARMEZAN,
+    BUSUIOC,
+    ULEI_MASLINE,
 ] as const;
 
 // SANDWICHES
 
-export const PROSCIUTTO_PANUOZZO = [
+export const PANUOZZO_COTTO = [
     SOS_ROSII,
     MOZZARELLA,
     PROSCIUTTO_COTTO,
     ROSII,
     RUCOLA,
-];
+] as const;
 
-export const SALAMI_PANUOZZO = [
+export const PANUOZZO_CRUDO = [
     SOS_ROSII,
     MOZZARELLA,
-    SALAM_NAPOLI_DULCE_PICANT,
+    PROSCIUTTO_CRUDO,
     ROSII,
     RUCOLA,
-];
+] as const;
 
-export const CAPRESE_PANUOZZO = [MOZZARELLA, ROSII, ULEI_MASLINE, BUSUIOC];
+export const PANUOZZO_SALAMI = [
+    SOS_ROSII,
+    MOZZARELLA,
+    SALAM_NAPOLI,
+    ROSII,
+    RUCOLA,
+] as const;
+
+export const PANUOZZO_CAPRESSE = [
+    SOS_ROSII,
+    MOZZARELLA,
+    ROSII,
+    BUSUIOC,
+    ULEI_MASLINE,
+] as const;
+
+export const PIZZA_DOG_CRENVUSTI = [
+    ALUAT_PIZZA,
+    SOS_ROSII,
+    MOZZARELLA,
+    CRENVUSTI,
+    MUSTAR,
+] as const;
+
+export const PIZZA_DOG_CABANOS = [
+    ALUAT_PIZZA,
+    SOS_ROSII,
+    MOZZARELLA,
+    CABANOS,
+    MUSTAR,
+] as const;
 
 // DIVERSE
 
-export const SOS_ALB = [IAURT, MAIONEZA, USTUROI] as const;
+export const SOS_ROSII_PICANT = [SOS_ROSII, PEPERONCINO] as const;
+
+export const SOS_ALB = [IAURT, MAIONEZA, USTUROI, OREGANO] as const;

@@ -1,49 +1,29 @@
 import { TMenuCategory } from "../../types/menu";
-import { SOS_ALB } from "./recipes";
+import { product } from "./product";
+import { SOS_ALB, SOS_ROSII_PICANT } from "./recipes";
 
 export const DIVERSE: TMenuCategory["products"] = [
-    {
-        name: "Sos roșii",
-        description: "dulce / picant",
-        ingredients: null,
-        variants: [
-            {
-                price: { value: 4, currency: "ron" } as const,
-                weight: { value: 50, unit: "ml" } as const,
-            } as const,
-        ] as const,
-    } as const,
-    {
+    product({
+        name: "Sos roșii dulce",
+        price: 5,
+        weight: { value: 50, unit: "ml" },
+    }),
+    product({
+        name: "Sos roșii picant",
+        ingredients: SOS_ROSII_PICANT,
+        price: 5,
+        weight: { value: 50, unit: "ml" },
+    }),
+    product({
         name: "Sos alb",
-        description: null,
-        ingredients: SOS_ALB.join(", "),
-        variants: [
-            {
-                price: { value: 4, currency: "ron" } as const,
-                weight: { value: 50, unit: "ml" } as const,
-            } as const,
-        ] as const,
-    } as const,
-    {
-        name: "Ulei aromatizat",
-        description: "picant / usturoi",
-        ingredients: null,
-        variants: [
-            {
-                price: { value: 4, currency: "ron" } as const,
-                weight: { value: 50, unit: "ml" } as const,
-            } as const,
-        ] as const,
-    } as const,
-    {
-        name: "Ambalaj pizza",
-        description: null,
-        ingredients: null,
-        variants: [
-            {
-                price: { value: 2, currency: "ron" } as const,
-                weight: null,
-            } as const,
-        ] as const,
-    } as const,
-] as const;
+        ingredients: SOS_ALB,
+        price: 5,
+        weight: { value: 50, unit: "ml" },
+    }),
+    product({
+        name: "Ulei picant / cu usturoi",
+        description: "Ulei măsline aromatizat",
+        price: 5,
+    }),
+    product({ name: "Cutie pizza", price: 2 }),
+];

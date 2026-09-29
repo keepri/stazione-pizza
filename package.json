@@ -1,6 +1,7 @@
 {
     "name": "stazione",
     "version": "0.1.0",
+    "type": "module",
     "scripts": {
         "start": "vite",
         "dev": "vite",

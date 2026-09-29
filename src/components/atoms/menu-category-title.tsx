@@ -3,10 +3,6 @@ import { Accessor, Index, Show } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
 
 import { TMenuCategory } from "../../types/menu";
-import {
-    MENU_DOUBLE_ICON_WIDTH,
-    MENU_SINGLE_ICON_WIDTH,
-} from "../../utils/constants";
 
 const ICON_SIZE = 60;
 
@@ -26,15 +22,7 @@ export function MenuCategoryTitle(props: TProps) {
                 {props.children}
             </h2>
             <Show when={Boolean(numberOfIcons)}>
-                <div
-                    class={clsx(
-                        "flex items-center justify-end",
-                        numberOfIcons > 1 && "justify-around",
-                        numberOfIcons === 2
-                            ? `w-${MENU_DOUBLE_ICON_WIDTH}`
-                            : `w-${MENU_SINGLE_ICON_WIDTH}`,
-                    )}
-                >
+                <div class="flex items-center justify-end">
                     <Index each={props.icons} children={renderIcons} />
                 </div>
             </Show>

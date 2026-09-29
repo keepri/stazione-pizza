@@ -28,17 +28,14 @@ export default {
                     "2xl": "6rem",
                 },
             },
-        },
-        colors({ colors }) {
-            return {
-                ...colors,
+            colors: {
                 stz: {
                     background: STZ_BACKGROUND,
                     primary: STZ_PRIMARY,
                     dark: STZ_DARK,
                     light: STZ_LIGHT,
                 },
-            };
+            },
         },
     },
     plugins: [],

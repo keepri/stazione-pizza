@@ -1,58 +1,62 @@
 import { TMenuCategory } from "../../types/menu";
+import { product } from "./product";
 import {
-    CAPRESE_PANUOZZO,
-    PROSCIUTTO_PANUOZZO,
-    SALAMI_PANUOZZO,
+    PANUOZZO_CAPRESSE,
+    PANUOZZO_COTTO,
+    PANUOZZO_CRUDO,
+    PANUOZZO_SALAMI,
+    PIZZA_DOG_CABANOS,
+    PIZZA_DOG_CRENVUSTI,
 } from "./recipes";
 
 const PAINE_NAPOLETANA_NAME = "Pâinică napoletană";
-const PROSCIUTTO_PANUOZZO_NAME = "Prosciutto Panuozzo";
-const SALAMI_PANUOZZO_NAME = "Salami Panuozzo";
-const CAPRESE_PANUOZZO_NAME = "Caprese Panuozzo";
+const PANUOZZO_COTTO_NAME = "Panuozzo cotto";
+const PANUOZZO_CRUDO_NAME = "Panuozzo crudo";
+const PANUOZZO_SALAMI_NAME = "Panuozzo salami";
+const PANUOZZO_CAPRESSE_NAME = "Panuozzo capresse";
+const PIZZA_DOG_CRENVUSTI_NAME = "Pizza Dog Crenvuști";
+const PIZZA_DOG_CABANOS_NAME = "Pizza Dog Cabanos";
 
 export const SANDWICHES: TMenuCategory["products"] = [
-    {
+    product({
         name: PAINE_NAPOLETANA_NAME,
-        description: null,
-        ingredients: null,
-        variants: [
-            {
-                price: { value: 10, currency: "ron" } as const,
-                weight: { value: 120, unit: "g" } as const,
-            } as const,
-        ] as const,
-    } as const,
-    {
-        name: PROSCIUTTO_PANUOZZO_NAME,
-        description: null,
-        ingredients: PROSCIUTTO_PANUOZZO.join(", "),
-        variants: [
-            {
-                price: { value: 23, currency: "ron" } as const,
-                weight: { value: 260, unit: "g" } as const,
-            } as const,
-        ] as const,
-    } as const,
-    {
-        name: SALAMI_PANUOZZO_NAME,
-        description: null,
-        ingredients: SALAMI_PANUOZZO.join(", "),
-        variants: [
-            {
-                price: { value: 23, currency: "ron" } as const,
-                weight: { value: 260, unit: "g" } as const,
-            } as const,
-        ] as const,
-    } as const,
-    {
-        name: CAPRESE_PANUOZZO_NAME,
-        description: null,
-        ingredients: CAPRESE_PANUOZZO.join(", "),
-        variants: [
-            {
-                price: { value: 21, currency: "ron" } as const,
-                weight: { value: 260, unit: "g" } as const,
-            } as const,
-        ] as const,
-    } as const,
-] as const;
+        price: 10,
+        weight: { value: 120, unit: "g" },
+    }),
+    product({
+        name: PANUOZZO_COTTO_NAME,
+        ingredients: PANUOZZO_COTTO,
+        price: 28,
+        weight: { value: 260, unit: "g" },
+    }),
+    product({
+        name: PANUOZZO_CRUDO_NAME,
+        ingredients: PANUOZZO_CRUDO,
+        price: 32,
+        weight: { value: 260, unit: "g" },
+    }),
+    product({
+        name: PANUOZZO_SALAMI_NAME,
+        ingredients: PANUOZZO_SALAMI,
+        price: 28,
+        weight: { value: 260, unit: "g" },
+    }),
+    product({
+        name: PANUOZZO_CAPRESSE_NAME,
+        ingredients: PANUOZZO_CAPRESSE,
+        price: 26,
+        weight: { value: 260, unit: "g" },
+    }),
+    product({
+        name: PIZZA_DOG_CRENVUSTI_NAME,
+        ingredients: PIZZA_DOG_CRENVUSTI,
+        price: 19,
+        weight: { value: 250, unit: "g" },
+    }),
+    product({
+        name: PIZZA_DOG_CABANOS_NAME,
+        ingredients: PIZZA_DOG_CABANOS,
+        price: 19,
+        weight: { value: 250, unit: "g" },
+    }),
+];
